@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import assets from "../assets/assets";
+import {themeIcons} from "../assets/assets";
 
 const ThemeToggleBtn = ({ theme, setTheme }) => {
 	useEffect(() => {
@@ -24,15 +24,15 @@ const ThemeToggleBtn = ({ theme, setTheme }) => {
 				{theme === "dark" ? (
 					<img
 						onClick={() => setTheme("light")}
-						src={assets.sun_icon}
-						className="size-8.5 p-1.5 border border-gray-500 rounded-full"
+						src={themeIcons.sun_icon}
+						className="size-8.5 p-1.5 border border-gray-500 rounded-full cursor-pointer"
 						alt=""
 					/>
 				) : (
 					<img
 						onClick={() => setTheme("dark")}
-						src={assets.moon_icon}
-						className="size-8.5 p-1.5 border border-gray-500 rounded-full"
+						src={themeIcons.moon_icon}
+						className="size-8.5 p-1.5 border border-gray-500 rounded-full bg-yellow-500 cursor-pointer"
 						alt=""
 					/>
 				)}

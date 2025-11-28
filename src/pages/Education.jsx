@@ -1,91 +1,60 @@
 import React from "react";
-import { FaTools } from "react-icons/fa";
-import { FcGraduationCap } from "react-icons/fc";
-import { RiGraduationCapFill } from "react-icons/ri";
+import { motion } from "framer-motion";
+import { educationData } from "../assets/assets";
 
 const Education = () => {
 	return (
-		<>
-			<div className="flex flex-col items-center">
-				<div>
-					<h1 className="text-4xl font-bold my-10 w-120 text-center text-black dark:text-white">
-						My{" "}
-						<span className="text-yellow-500 dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:via-[#1e3a8a] dark:to-[#1e40af] dark:bg-clip-text dark:text-transparent">
-							Academic Journey and
-						</span>{" "}
-						Skills
-					</h1>
-				</div>
-				<div className="flex gap-40">
-					{/* My Academic Journey */}
-					<div className="border dark:border-none border-gray-300 p-7 rounded-lg bg-gray-200 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af]">
-						<h1 className="text-2xl font-bold flex gap-2 items-center text-black dark:text-white">
-							<RiGraduationCapFill className="rounded-full h-9 w-9 p-1.5 bg-yellow-500 dark:bg-red-700" />
-							<span className="mt-1">Education</span>
-						</h1>
-						<div className="border-t-3 border-gray-300 dark:border-red-600 my-3">
-							<div className="my-5 border-l-5 border-gray-400 dark:border-red-700">
-								<div className="ml-4">
-									<h3 className="dark:text-gray-400">
-										2019 − Present
+		<section className="px-4 md:px-16 py-16 bg-white dark:bg-[#0b0f1a] text-black dark:text-white">
+			<div className="max-w-5xl mx-auto">
+				<h2 className="text-3xl md:text-4xl font-bold text-center mb-14">
+					🎓 My <span className="text-yellow-500 dark:text-blue-700">Education</span>
+				</h2>
+
+				<div className="relative flex gap-10 bg-red- mx-15">
+					{/* Vertical Line */}
+					<div className="absolute left-2 md:left-10 lg:left-20 top-0 w-1.5 h-full bg-gray-300 dark:bg-red-600"/>
+
+					{/* Education Cards */}
+					<div className="flex flex-col gap-16 ml-10 md:ml-34 lg:ml-54 w-full">
+						{educationData.map((item, index) => (
+							<motion.div
+								key={index}
+								initial={{ opacity: 0, y: 40 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								transition={{
+									duration: 0.6,
+									delay: index * 0.2,
+								}}
+								viewport={{ once: true }}
+								className="relative"
+							>
+								{/* Horizontal Line */}
+								<div className="absolute left-[-24px] md:left-[-91px] lg:left-[-132px] top-21 lg:top-23 w-6 md:w-23 lg:w-33 h-1.5 bg-gray-300 dark:bg-red-600"/>
+
+								{/* Dot */}
+								<div className="absolute left-[-34px] md:left-[-101px] lg:left-[-141px] top-20 lg:top-22 w-4 h-4 md:w-4 md:h-4 rounded-full bg-white border-4 border-gray-300 dark:border-red-600 dark:bg-[#0b0f1a]"/>
+
+								{/* Card */}
+								<div className="border border-gray-300 dark:border-gray-700 rounded-lg p-5 lg:p-7 bg-gray-200 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af] shadow-md w-full max-w-xl">
+									<h3 className="text-sm text-gray-500 dark:text-gray-400 mb-1 border-t-3">
+										{item.year}
 									</h3>
-									<h1 className="text-xl font-bold dark:text-gray-200">
-										Bachelor in Computer Engineering
-									</h1>
-									<h3 className="dark:text-gray-400">
-										Eastern College of Engineering
+									<h2 className="text-lg md:text-xl font-semibold dark:text-gray-200">
+										{item.degree}
+									</h2>
+									<h3 className="dark:text-gray-400 text-sm md:text-base">
+										{item.institute}
 									</h3>
+									<p className="text-sm mt-3 dark:text-gray-300 leading-relaxed border-b-3">
+										{item.desc}
+									</p>
 								</div>
-							</div>
-							<div className="my-5 border-l-5 border-gray-400 dark:border-red-700">
-								<div className="ml-4">
-									<h3 className="dark:text-gray-400">2016 − 2019</h3>
-									<h1 className="text-xl font-bold dark:text-gray-200">
-										Diploma in Computer Engineering
-									</h1>
-									<h3 className="dark:text-gray-400">
-										Adarsha Secondary School
-									</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-					{/* My Skills */}
-					<div className="border dark:border-none border-gray-300 p-7 rounded-lg bg-gray-200 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af]">
-						<h1 className="text-2xl font-bold flex gap-2 items-center text-black dark:text-white">
-							<FaTools className="rounded-full h-9 w-9 p-1.5 bg-yellow-500 dark:bg-red-700" />
-							<span className="mt-1">Skills</span>
-						</h1>
-						<div className="border-t-3 border-gray-300 dark:border-red-600 my-3">
-							<div className="my-5 border-l-5 border-gray-400 dark:border-red-700">
-								<div className="ml-4">
-									<h3 className="dark:text-gray-400">
-										2019 − Present
-									</h3>
-									<h1 className="text-xl font-bold dark:text-gray-200">
-										Bachelor in Computer Engineering
-									</h1>
-									<h3 className="dark:text-gray-400">
-										Eastern College of Engineering
-									</h3>
-								</div>
-							</div>
-							<div className="my-5 border-l-5 border-gray-400 dark:border-red-700">
-								<div className="ml-4">
-									<h3 className="dark:text-gray-400">2016 − 2019</h3>
-									<h1 className="text-xl font-bold dark:text-gray-200">
-										Diploma in Computer Engineering
-									</h1>
-									<h3 className="dark:text-gray-400">
-										Adarsha Secondary School
-									</h3>
-								</div>
-							</div>
-						</div>
+							</motion.div>
+						))}
 					</div>
 				</div>
 			</div>
-		</>
+		</section>
 	);
 };
 

@@ -6,20 +6,18 @@ import Education from "./pages/Education";
 import HomePage from "./pages/HomePage";
 import NavBar from "./pages/NavBar";
 import Projects from "./pages/Projects";
-import Services from "./pages/Services";
-import Example from "./pages/Example";
+import Features from "./pages/Features";
 
 const App = () => {
 		const [theme, setTheme] = useState(
-		localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+		localStorage.getItem("theme") ? localStorage.getItem("theme") : "dark"
 	);
 	return (
 		<>
 			<div className="bg-white dark:bg-[#0a0f0d]">
 				<NavBar theme={theme} setTheme={setTheme}  />
-				{/* <Example/> */}
 				<HomePage />
-				<Services />
+				<Features />
 				<About />
 				<Education />
 				<Projects />

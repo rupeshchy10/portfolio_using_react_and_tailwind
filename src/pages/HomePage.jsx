@@ -8,20 +8,20 @@ import { PiCursorClickBold } from "react-icons/pi";
 const HomePage = () => {
 	return (
 		<>
-			<div className="flex justify-between mx-14 h-[530px] ">
-				<div className="flex-1 my-20">
+			<div className="flex justify-between mx-14 h-[650px]">
+				<div className="flex-1 my-40">
 					<div className="border-2 border-gray-500 w-26 flex items-center justify-center p-0.5 text-black dark:text-white">
 						Hello There!
 					</div>
 					<div className="text-5xl font-bold my-6 space-y-2 text-black dark:text-gray-300">
 						<p>
 							I'm{" "}
-							<span className="text-yellow-500 dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:via-[#1e3a8a] dark:to-[#1e40af] dark:bg-clip-text dark:text-transparent">
+							<span className="text-yellow-500 dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:via-[#1e3a8a] dark:to-[#1e40af] dark:bg-clip-text dark:text-transparent ">
 								Rupesh Choudhary,
 							</span>
 						</p>
 						<p>An Aspiring</p>
-						<p className="dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:via-[#1e3a8a] dark:to-[#1e40af] dark:bg-clip-text dark:text-transparent">
+						<p className="text-blue-500 dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:via-[#1e3a8a] dark:to-[#1e40af] dark:bg-clip-text dark:text-transparent">
 							Frontend Developer.
 						</p>
 					</div>

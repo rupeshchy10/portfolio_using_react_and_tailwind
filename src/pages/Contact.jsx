@@ -202,13 +202,13 @@ const Contact = () => {
 
 	return (
 		<>
-			<div className="h-[600px] bg-[#005427] flex items-center justify-center text-white">
+			<div className="h-[600px] bg-[#005427] dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] flex items-center justify-center text-white">
 				<div className="flex justify-between my-15 mx-20">
 					{/* Left Portion */}
 					<div className="bg-red-">
 						<h1 className="text-5xl font-semibold w-120">
 							Let's Talk for{" "}
-							<span className="text-yellow-600">Your Next Projects</span>
+							<span className="text-yellow-600 dark:text-green-600">Your Next Projects</span>
 						</h1>
 						<h3 className="my-7 text-xl">
 							I'm open to internships, collaborations, or freelance
@@ -216,19 +216,19 @@ const Contact = () => {
 						</h3>
 						<ul className="text-xl">
 							<li className="flex my-3 gap-2">
-								<FaPhoneAlt className="rounded-full w-8 h-8 p-1.5 bg-yellow-500 text-black" />
+								<FaPhoneAlt className="rounded-full w-8 h-8 p-1.5 bg-yellow-500 dark:bg-green-600 text-black" />
 								+977-9862885899
 							</li>
 							<li className="flex my-3 gap-2">
-								<MdEmail className="rounded-full w-8 h-8 p-1.5 bg-yellow-500 text-black" />
+								<MdEmail className="rounded-full w-8 h-8 p-1.5 bg-yellow-500 dark:bg-green-600 text-black" />
 								rupevilary1010@gmail.com
 							</li>
 							<li className="flex my-3 gap-2">
-								<FaLinkedinIn className="rounded-full w-8 h-8 p-1.5 bg-yellow-500 text-black" />
+								<FaLinkedinIn className="rounded-full w-8 h-8 p-1.5 bg-yellow-500 dark:bg-green-600 text-black" />
 								LinkedIn
 							</li>
 							<li className="flex my-3 gap-2">
-								<FaLocationDot className="rounded-full w-8 h-8 p-1.5 bg-yellow-500 text-black" />
+								<FaLocationDot className="rounded-full w-8 h-8 p-1.5 bg-yellow-500 dark:bg-green-600 text-black" />
 								Katahari-4, Morang, Nepal
 							</li>
 						</ul>
@@ -244,7 +244,7 @@ const Contact = () => {
 									<input
 										type="text"
 										placeholder="Ex. John Smith"
-										className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] rounded-lg p-2"
+										className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] dark:bg-blue-900 dark:border-blue-800 dark:border-1 rounded-lg p-2"
 									/>
 								</div>
 								<div className="flex flex-col w-75">
@@ -254,7 +254,7 @@ const Contact = () => {
 									<input
 										type="email"
 										placeholder="example123@gmail.com"
-										className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] rounded-lg p-2"
+										className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] dark:bg-blue-900 dark:border-blue-800 dark:border-1 rounded-lg p-2"
 									/>
 								</div>
 							</div>
@@ -266,7 +266,7 @@ const Contact = () => {
 									<input
 										type="text"
 										placeholder="Ex. John Smith"
-										className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] rounded-lg p-2"
+										className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] dark:bg-blue-900 dark:border-blue-800 dark:border-1 rounded-lg p-2"
 									/>
 								</div>
 								<div className="flex flex-col w-75">
@@ -274,7 +274,7 @@ const Contact = () => {
 										Country <span className="text-red-500">*</span>
 									</label>
 
-									<select className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] rounded-lg p-2 mt-1">
+									<select className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] rounded-lg p-2 mt-1 dark:bg-blue-900 dark:border-blue-800 dark:border-1">
 										<option value="">Select your country</option>
 										{countries.map((country) => (
 											<option
@@ -294,7 +294,7 @@ const Contact = () => {
 								</label>
 								<textarea
 									placeholder="Enter here..."
-									className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] rounded-lg w-full h-40 p-2 resize-none align-top"
+									className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] rounded-lg w-full h-40 p-2 resize-none align-top dark:bg-blue-900 dark:border-blue-800 dark:border-1"
 								/>
 							</div>
 							

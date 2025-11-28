@@ -4,9 +4,9 @@ import { FaArrowCircleDown } from "react-icons/fa";
 const About = () => {
 	return (
 		<>
-			<div className="h-[600px] bg-[#005427] dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af] flex items-center justify-center text-white">
+			<div className="h-[600px] bg-[#005427] dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] flex items-center justify-center text-white">
 				<div className="bg-500 h-[500px] w-[1200px] flex items-center justify-between mx-50">
-					<div className="bg-yellow-500 w-80 h-80 rounded-full flex items-center justify-center mx-10">
+					<div className="bg-yellow-500 dark:bg-red-700 w-80 h-80 rounded-full flex items-center justify-center mx-10">
 						Cirle
 					</div>
 					<div className="bg-500 w-170 h-85">
@@ -15,7 +15,7 @@ const About = () => {
 						</div>
 						<div className="text-4xl font-bold mt-2">
 							Who is{" "}
-							<span className="text-yellow-600 italic">
+							<span className="text-yellow-600 dark:text-green-600 italic">
 								Rupesh Choudhary?
 							</span>
 						</div>
