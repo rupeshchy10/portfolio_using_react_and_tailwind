@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import NavBar from "./pages/NavBar";
 import Projects from "./pages/Projects";
 import Features from "./pages/Features";
+import Footer from "./pages/Footer";
 
 const App = () => {
 		const [theme, setTheme] = useState(
@@ -15,13 +16,14 @@ const App = () => {
 	return (
 		<>
 			<div className="bg-white dark:bg-[#0a0f0d]">
-				<NavBar theme={theme} setTheme={setTheme}  />
+				{/* <NavBar theme={theme} setTheme={setTheme}  /> */}
 				<HomePage />
 				<Features />
 				<About />
 				<Education />
 				<Projects />
 				<Contact />
+                <Footer/>
 			</div>
 		</>
 	);

@@ -1,17 +1,43 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ThemeToggleBtn from "../component/ThemeToggleBtn";
 
 const NavBar = ({ theme, setTheme }) => {
 	const [isOpen, setIsOpen] = useState(false);
+	const [showNav, setShowNav] = useState(true);
+
+	const lastScrollY = useRef(0);
+
+	//Scroll Logic
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentScrollY = window.scrollY;
+
+			if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+				setShowNav(false); // scrolling down -> hide
+			} else {
+				setShowNav(true); // scrolling up -> show
+			}
+
+			lastScrollY.current = currentScrollY;
+		};
+		window.addEventListener("scroll", handleScroll);
+
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
+
 	return (
 		<>
+			{/* Wrapper */}
+			<div
+				className={`fixed top-6 left-0 w-full z-50 transition-transform duration-800 ${
+					showNav ? "translate-y-0" : "-translate-y-22"
+				}`}
+			>
 				{/* Navbar */}
-
-				<div className="bg-[#005427] dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af] text-white flex justify-between items-center mt-6 mx-14 h-13 rounded-4xl w-352 shadow-[0_0_25px_rgba(30,64,175,0.4)] backdrop-blur-sm border border-transparent dark:border-[#1e3a8a]/40">
-					{/* <div className="bg-[#005427] dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af] text-white flex justify-between items-center mt-6 mx-auto h-13 rounded-4xl w-full max-w-7xl shadow-[0_0_25px_rgba(30,64,175,0.4)] backdrop-blur-sm border border-transparent dark:border-[#1e3a8a]/40"> */}
+				<div className="mx-4 sm:mx-8 lg:mx-14 bg-[#005427] dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af] text-white flex justify-between items-center  h-13 rounded-full shadow-[0_0_25px_rgba(30,64,175,0.4)] backdrop-blur-sm border border-transparent dark:border-[#1e3a8a]/40">
 					{/* Logo */}
-					<div className="text-2xl font-bold m-2 flex justify-center items-center">
-						<span className="bg-yellow-500 dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] rounded-full w-10 h-10 flex justify-center items-center text-black dark:text-white shadow-[0_0_15px_rgba(59,130,246,0.6)] hover:shadow-[0_0_25px_rgba(59,130,246,0.9)] transition-all duration-300 mr-2">
+					<div className="text-xl sm:text-2xl font-bold m-2 flex justify-center items-center">
+						<span className="bg-yellow-500 dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] rounded-full w-10 h-10 flex justify-center items-center text-black dark:text-white shadow-[0_0_15px_rgba(59,130,246,0.6)] hover:shadow-[0_0_25px_rgba(59,130,246,0.9)]  mr-2">
 							R
 						</span>
 						Rupesh
@@ -20,8 +46,8 @@ const NavBar = ({ theme, setTheme }) => {
 						</span>
 					</div>
 
-					{/* Nav Links */}
-					<ol className="hidden md:flex space-x-8 font-medium">
+					{/* Desktop Links */}
+					<ul className="hidden md:flex space-x-8 font-medium text-base">
 						<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] transition-colors cursor-pointer">
 							Home
 						</li>
@@ -37,7 +63,7 @@ const NavBar = ({ theme, setTheme }) => {
 						<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] transition-colors cursor-pointer">
 							Projects
 						</li>
-					</ol>
+					</ul>
 
 					{/* Buttons */}
 					<div className="flex items-center space-x-2">
@@ -55,27 +81,31 @@ const NavBar = ({ theme, setTheme }) => {
 						</button>
 					</div>
 				</div>
+			</div>
 
-				{/* Mobile Nav Links */}
-				{isOpen && (
-					<ol className="md:hidden flex flex-col items-center space-y-4 mt-4 font-medium bg-[#005427] dark:bg-[#0f172a] p-4 rounded-lg">
-						<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
-							Home
-						</li>
-						<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
-							Services
-						</li>
-						<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
-							About
-						</li>
-						<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
-							Projects
-						</li>
-						<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
-							Blogs
-						</li>
-					</ol>
-				)}
+			{/* Mobile Nav Links */}
+			{isOpen && (
+				<ul className="md:hidden flex flex-col items-center space-y-4 mt-4 font-medium bg-[#005427] dark:bg-[#0f172a] p-4 rounded-lg text-black dark:text-white">
+					<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
+						Home
+					</li>
+					<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
+						Services
+					</li>
+					<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
+						About
+					</li>
+					<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
+						Projects
+					</li>
+					<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
+						Blogs
+					</li>
+					<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
+						Contact me
+					</li>
+				</ul>
+			)}
 		</>
 	);
 };

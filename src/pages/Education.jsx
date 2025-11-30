@@ -36,7 +36,7 @@ const Education = () => {
 
 								{/* Card */}
 								<div className="border border-gray-300 dark:border-gray-700 rounded-lg p-5 lg:p-7 bg-gray-200 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af] shadow-md w-full max-w-xl">
-									<h3 className="text-sm text-gray-500 dark:text-gray-400 mb-1 border-t-3">
+									<h3 className="text-sm text-gray-500 border-gray-400 dark:border-gray-400 dark:text-gray-400 mb-1 border-t-3">
 										{item.year}
 									</h3>
 									<h2 className="text-lg md:text-xl font-semibold dark:text-gray-200">
@@ -45,7 +45,7 @@ const Education = () => {
 									<h3 className="dark:text-gray-400 text-sm md:text-base">
 										{item.institute}
 									</h3>
-									<p className="text-sm mt-3 dark:text-gray-300 leading-relaxed border-b-3">
+									<p className="text-sm mt-3 dark:text-gray-300 border-gray-400 dark:border-gray-400 leading-relaxed border-b-3">
 										{item.desc}
 									</p>
 								</div>

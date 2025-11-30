@@ -2,7 +2,26 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-
 * {
 	font-family: "Poppins", sans-serif;
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+.marquee {
+	white-space: nowrap;
+	display: inline-flex;
+	animation: marquee 20s linear infinite;
+}
+
+.marquee:hover {
+	animation-play-state: paused;
+	cursor: pointer;
 }
