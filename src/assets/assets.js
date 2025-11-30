@@ -24,7 +24,7 @@ const projects = [
 		title: "Imaginet - Digital Agency Website",
 		image: Imaginet,
 		alt_pic: "Imaginet_Pic",
-		techs: ["React", "Tailwind CSS", "JavaScript"],
+		techs: ["React", "Tailwind", "JavaScript"],
 		description: "Your Imagination, Our Creation.",
 	},
 	{
@@ -32,7 +32,7 @@ const projects = [
 		title: "PickZy - E-Commerce Website",
 		image: PickZy,
 		alt_pic: "PickZy_Pic",
-		techs: ["React", "Tailwind CSS", "JavaScript"],
+		techs: ["React", "Tailwind", "JavaScript"],
 		description: "An easy to pick anything website.",
 	},
 	{
@@ -40,7 +40,7 @@ const projects = [
 		title: "Portfolio Website",
 		image: Portfolio,
 		alt_pic: "Portfolio_Pic",
-		techs: ["React", "Tailwind CSS", "JavaScript"],
+		techs: ["React", "Tailwind", "JavaScript"],
 		description:
 			"A portfolio reflecting my skills and journey to improvement",
 	},
