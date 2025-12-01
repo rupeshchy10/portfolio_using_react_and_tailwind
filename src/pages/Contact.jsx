@@ -92,7 +92,7 @@ const Contact = () => {
 								<input
 									type="text"
 									placeholder="Ex. John Smith"
-									className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] dark:bg-blue-900 dark:border-blue-800 dark:border-1 rounded-lg p-2"
+									className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] dark:bg-blue-900 dark:border-blue-800 dark:border rounded-lg p-2"
 								/>
 							</div>
 							<div className="flex flex-col w-full md:w-1/2">
@@ -101,7 +101,7 @@ const Contact = () => {
 									<span className="text-red-500">*</span>
 								</label>
 
-								<select className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] rounded-lg p-2 mt-1 dark:bg-blue-900 dark:border-blue-800 dark:border">
+								<select className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] rounded-lg p-2.5 mt- dark:bg-blue-900 dark:border-blue-800 dark:border">
 									<option value="">
 										Select your country
 									</option>

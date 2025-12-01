@@ -58,6 +58,8 @@ const Features = () => {
 						<motion.div
 							key={index}
 							whileHover={{ scale: 1.05 }}
+                            			viewport={{ once: false }}
+
 							className="bg-gray-100 dark:bg-[#111827] p-6 rounded-2xl shadow-md text-center flex flex-col items-center gap-4"
 						>
 							<div className="text-3xl text-blue-600 dark:text-blue-400">
@@ -97,7 +99,7 @@ function SkillBlock({ title, data }) {
 		<motion.div
 			initial={{ opacity: 0, y: 40 }}
 			whileInView={{ opacity: 1, y: 0 }}
-			viewport={{ once: true }}
+			viewport={{ once: false }}
 			transition={{ duration: 0.5 }}
 			className="bg-gray-100 dark:bg-[#111827] p-6 rounded-2xl shadow-md"
 		>

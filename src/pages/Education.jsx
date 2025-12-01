@@ -25,7 +25,7 @@ const Education = () => {
 									duration: 0.6,
 									delay: index * 0.2,
 								}}
-								viewport={{ once: true }}
+								viewport={{ once: false }}
 								className="relative"
 							>
 								{/* Horizontal Line */}

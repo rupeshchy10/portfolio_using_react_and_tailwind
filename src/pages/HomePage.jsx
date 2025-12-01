@@ -1,32 +1,51 @@
-import React from "react";
-import { CgPlayButtonO } from "react-icons/cg";
+import React, { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { GiStaryu } from "react-icons/gi";
-import { IoMdArrowDropright } from "react-icons/io";
-import { PiCursorClickBold } from "react-icons/pi";
+import { motion } from "motion/react";
+import Typewriter from "../component/Typewriter";
+import SlidingText from "../component/SlidingText";
+import AnimatedName from "../component/AnimatedName";
+import FloatingName from "../component/FloatingName";
 
 const HomePage = () => {
+	const skills = [
+		"Frontend Developer",
+		"Backend Developer",
+		"PERN Stack Developer",
+	];
+
+	const [index, setIndex] = useState(0);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setIndex((prev) => (prev + 1) % skills.length);
+		}, 2000);
+
+		return () => clearInterval(interval);
+	}, []);
+
 	return (
 		<div>
 			<div className="grid lg:grid-cols-2 grid-cols-1 justify-between mx-14">
-				{/* Right Description Portion */}
+				{/* Left Description Portion */}
 				<div className="lg:my-40 my-30 ">
-					<div className="border-2 border-gray-500 w-26 flex items-center justify-center p-0.5 text-black dark:text-white ">
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.7 }}
+						viewport={{ once: false }}
+						className="border-2 border-gray-500 w-26 flex items-center justify-center p-0.5 text-black dark:text-white "
+					>
 						Hello There!
-					</div>
+					</motion.div>
 
 					{/* ------------Title Naming----------- */}
 					<div className="text-5xl font-bold my-6 space-y-2 text-black dark:text-gray-300 text-center lg:text-left">
 						<p>
-							I'm{" "}
-							<span className="text-yellow-500 dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:via-[#1e3a8a] dark:to-[#1e40af] dark:bg-clip-text dark:text-transparent ">
-								Rupesh Choudhary,
-							</span>
+							I'm <AnimatedName />
 						</p>
 						<p>An Aspiring</p>
-						<p className="text-blue-500 dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:via-[#1e3a8a] dark:to-[#1e40af] dark:bg-clip-text dark:text-transparent">
-							Frontend Developer.
-						</p>
+						<Typewriter />
 					</div>
 
 					{/* ------------Description------------- */}
@@ -53,7 +72,7 @@ const HomePage = () => {
 
 					{/* --------------Button-------------- */}
 					<div className="flex flex-col sm:flex-row items-center justify-center  lg:justify-start my-6 space-x-10 space-y-4 sm:space-y-0">
-                        {/* ----------------Button Group------------ */}
+						{/* ----------------Button Group------------ */}
 						<div className="flex items-center">
 							<button className="flex border-yellow-500 dark:border-red-700 border-3 rounded-full px-6 py-1.5 bg-[#005427] dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-white font-semibold cursor-pointer z-10">
 								View My Portfolio
@@ -63,17 +82,20 @@ const HomePage = () => {
 							</button>
 						</div>
 
-{/* ------------------"Get in Touch" Button--------------- */}
+						{/* ------------------"Get in Touch" Button--------------- */}
 						<div className="border-2 text-black dark:text-white border-black dark:border-red-700 rounded-4xl mr-10 sm:mr-0 px-3.5 h-10 flex items-center font-bold dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b]">
 							Get in Touch
 						</div>
 					</div>
 				</div>
 
-				{/* Image Portion */}
+				{/* Image Right Portion */}
 				<div className="bg-blue- -mt-50 sm:mt-0">
-					<div className="flex w-full items- justify-center">
-						<img src="/profile.png" className="h-[500px]  " />
+					<div className="flex w-full justify-center">
+						<img
+							src="../src/assets/images/main_profile.png"
+							className="h-[700px]  "
+						/>
 					</div>
 				</div>
 			</div>

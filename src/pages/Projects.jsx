@@ -1,14 +1,24 @@
 import { FaArrowRight } from "react-icons/fa";
 import { projects } from "../assets/assets";
+import { motion } from "motion/react";
+
 const Projects = () => {
 	return (
 		<div className="mt- px-6 sm:px-10 lg:px-14 py-10 ">
 			{/* Title & Button Section */}
 			<div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
-				<div className="font-bold text-4xl dark:text-white">
+				<motion.div
+					initial={{ opacity: 0, y: 30 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5, delay: 0.2 }}
+					viewport={{ once: false }}
+					className="font-bold text-4xl dark:text-white"
+				>
 					My Latest{" "}
-					<span className="text-yellow-500 dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:via-[#1e3a8a] dark:to-[#1e40af] dark:bg-clip-text dark:text-transparent  italic">Projects</span>
-				</div>
+					<span className="text-yellow-500 dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:via-[#1e3a8a] dark:to-[#1e40af] dark:bg-clip-text dark:text-transparent  italic">
+						Projects
+					</span>
+				</motion.div>
 
 				<div className="flex items-center">
 					<div className="flex border-yellow-500 dark:border-red-700 border-3 rounded-full px-6 py-1.5 bg-[#005427] dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-white font-semibold cursor-pointer z-10">
@@ -23,7 +33,11 @@ const Projects = () => {
 			{/* Responsive Grid Section */}
 			<section className="grid grid-cols-1 sm:grid-cols-2 md:gap-8 gap-4 lg:mx-24 sm:mx-2 items-stretch">
 				{projects.map((project) => (
-					<div
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: project.id * 0.2 }}
+						viewport={{ once: false }}
 						key={project.id}
 						className=" bg-gray-100 shadow-2xl dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] rounded-xl p-4 flex flex-col h-full"
 					>
@@ -55,7 +69,7 @@ const Projects = () => {
 								Live Preview
 							</button>
 						</div>
-					</div>
+					</motion.div>
 				))}
 			</section>
 		</div>
