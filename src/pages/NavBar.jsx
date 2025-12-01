@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import ThemeToggleBtn from "../component/ThemeToggleBtn";
+import { FaPhone } from "react-icons/fa6";
 
 const NavBar = ({ theme, setTheme }) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -76,8 +77,16 @@ const NavBar = ({ theme, setTheme }) => {
 						</button>
 
 						<ThemeToggleBtn theme={theme} setTheme={setTheme} />
-						<button className="hidden sm:block rounded-4xl bg-white dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-black dark:text-white font-semibold h-10 px-8 mr-2 shadow-[0_5px_20px_rgba(59,130,246,0.4)] hover:shadow-[0_0_25px_rgba(59,130,246,0.9)] hover:scale-105 transition-all duration-300 cursor-pointer">
+						<button className="hidden lg:block rounded-full bg-white dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-black dark:text-white font-semibold h-10 px-8 mr-2 shadow-[0_5px_20px_rgba(59,130,246,0.4)] hover:shadow-[0_0_25px_rgba(59,130,246,0.9)] hover:scale-105 transition-all duration-300 cursor-pointer">
 							Contact Me
+						</button>
+
+						{/* Contact Button */}
+                        <button
+							className="block lg:hidden text-xl rounded-full bg-white dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-black dark:text-white font-semibold h-8 w-8 p-1.5 mr-2 shadow-[0_5px_20px_rgba(59,130,246,0.4)] hover:shadow-[0_0_25px_rgba(59,130,246,0.9)] hover:scale-105 transition-all duration-300 cursor-pointer"
+							onClick={() => setIsOpen(!isOpen)}
+						>
+							<FaPhone />
 						</button>
 					</div>
 				</div>
@@ -85,24 +94,24 @@ const NavBar = ({ theme, setTheme }) => {
 
 			{/* Mobile Nav Links */}
 			{isOpen && (
-				<ul className="md:hidden flex flex-col items-center space-y-4 mt-4 font-medium bg-[#005427] dark:bg-[#0f172a] p-4 rounded-lg text-black dark:text-white">
-					<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
+				<ul className="md:hidden flex flex-col items-center space-y-4 mt-4 font-medium bg-[#005427] dark:bg-[#0f172a] p-4 rounded-lg text-white dark:text-white">
+					<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer mt-15">
 						Home
 					</li>
 					<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
-						Services
+						Features
 					</li>
 					<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
 						About
 					</li>
 					<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
+						Skills
+					</li>
+					<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
 						Projects
 					</li>
 					<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
-						Blogs
-					</li>
-					<li className="hover:text-yellow-500 dark:hover:text-[#60a5fa] cursor-pointer">
-						Contact me
+						Contact Me
 					</li>
 				</ul>
 			)}

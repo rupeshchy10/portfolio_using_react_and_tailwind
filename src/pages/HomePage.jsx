@@ -79,7 +79,7 @@ const HomePage = () => {
 			</div>
 
 			<div>
-				<div className="bg-yellow-500 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af] py-2.5 px-1 items-center z-10 relative flex overflow-hidden">
+				<div className="bg-yellow-500 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af] py-2.5 px-1 items-center z-10 relative flex overflow-hidden xl:-mt-5 lg:-mt-38">
 					<marquee
 						behavior="scroll"
 						direction="left"

@@ -34,14 +34,21 @@ const Footer = () => {
 							Home
 						</li>
 						<li className="hover:text-yellow-400 cursor-pointer">
+							Features
+						</li>
+						<li className="hover:text-yellow-400 cursor-pointer">
 							About
+						</li>
+						<li className="hover:text-yellow-400 cursor-pointer">
+							Skills
 						</li>
 						<li className="hover:text-yellow-400 cursor-pointer">
 							Projects
 						</li>
 						<li className="hover:text-yellow-400 cursor-pointer">
-							Contact
+							Contact Me
 						</li>
+						
 					</ul>
 				</div>
 
