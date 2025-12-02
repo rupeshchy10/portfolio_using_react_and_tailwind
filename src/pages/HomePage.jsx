@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { GiStaryu } from "react-icons/gi";
 import { motion } from "motion/react";
@@ -6,6 +6,7 @@ import Typewriter from "../component/Typewriter";
 import SlidingText from "../component/SlidingText";
 import AnimatedName from "../component/AnimatedName";
 import FloatingName from "../component/FloatingName";
+import profile_pic from "../assets/images/Rup_profile.png"
 
 const HomePage = () => {
 	// const skills = [
@@ -117,7 +118,7 @@ const HomePage = () => {
 					</div> */}
 					<div className="flex w-full lg:mt-24 md:-mt-30 sm:-mt-30 mt-20 justify-center">
 						<img
-							src="../src/assets/images/Rup_profile.png"
+							src={profile_pic}
 							className="lg:h-[550px] md:h-[450px] sm:h-[400px] h-[350px]"
 							alt="profile_pic"
 						/>

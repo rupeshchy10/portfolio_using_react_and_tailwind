@@ -2,6 +2,7 @@ import React from "react";
 import { FaArrowCircleDown } from "react-icons/fa";
 import FloatingName from "../component/FloatingName";
 import { motion } from "motion/react";
+import dark_profile from "../assets/images/dark_profile.png"
 
 const About = () => {
 	return (
@@ -9,13 +10,13 @@ const About = () => {
 			<div className="lg:h-[600px] bg-[#005427] dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] flex items-center justify-center text-white w-full">
 				<div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 px-5 md:px-10 lg:px-40 bg-green-">
 					{/* -----------------Image Left Portion------------- */}
-					{/* <div className="w-full lg:mb-10  max-w-xs md:max-w-sm lg:max-w-sm md:h-[450px] lg:h-[500px] sm:mx-auto bg-yellow- flex justify-end items-end sm:justify-center">
+					<div className="w-full lg:mb-10  max-w-xs md:max-w-sm lg:max-w-sm md:h-[450px] lg:h-[500px] sm:mx-auto bg-yellow- flex justify-end items-end sm:justify-center">
 						<img
-							src="../src/assets/images/dark_profile.png"
+							src={dark_profile}
 							alt="profile_pic"
 							className="max-w-full max-h-full object-cover mb-10"
 						/>
-					</div> */}
+					</div>
 
 					{/* <div
 						className="w-full lg:mb-10 max-w-xs md:max-w-sm lg:max-w-sm md:h-[450px] lg:h-[500px] sm:mx-auto flex justify-end items-end sm:justify-center bg-center bg-no-repeat bg-contain"
