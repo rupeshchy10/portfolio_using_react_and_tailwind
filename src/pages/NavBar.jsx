@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import ThemeToggleBtn from "../component/ThemeToggleBtn";
 import { FaPhone } from "react-icons/fa6";
 
-const NavBar = ({ theme, setTheme }) => {
+const NavBar = ({ theme, setTheme, scrollRef }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [showNav, setShowNav] = useState(true);
 
@@ -11,7 +11,7 @@ const NavBar = ({ theme, setTheme }) => {
 	//Scroll Logic
 	useEffect(() => {
 		const handleScroll = () => {
-			const currentScrollY = window.scrollY;
+			const currentScrollY = scrollRef.current.scrollTop;
 
 			if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
 				setShowNav(false); // scrolling down -> hide
@@ -21,9 +21,11 @@ const NavBar = ({ theme, setTheme }) => {
 
 			lastScrollY.current = currentScrollY;
 		};
-		window.addEventListener("scroll", handleScroll);
 
-		return () => window.removeEventListener("scroll", handleScroll);
+		const container = scrollRef.current;
+		container.addEventListener("scroll", handleScroll);
+
+		return () => container.removeEventListener("scroll", handleScroll);
 	}, []);
 
 	return (
@@ -82,7 +84,7 @@ const NavBar = ({ theme, setTheme }) => {
 						</button>
 
 						{/* Contact Button */}
-                        <button
+						<button
 							className="block lg:hidden text-xl rounded-full bg-white dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-black dark:text-white font-semibold h-8 w-8 p-1.5 mr-2 shadow-[0_5px_20px_rgba(59,130,246,0.4)] hover:shadow-[0_0_25px_rgba(59,130,246,0.9)] hover:scale-105 transition-all duration-300 cursor-pointer"
 							onClick={() => setIsOpen(!isOpen)}
 						>

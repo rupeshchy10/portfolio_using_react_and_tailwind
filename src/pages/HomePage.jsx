@@ -28,7 +28,7 @@ const HomePage = () => {
 		<div>
 			<div className="grid lg:grid-cols-2 grid-cols-1 justify-between mx-14">
 				{/* Left Description Portion */}
-				<div className="lg:my-40 my-30 ">
+				<div className="lg:my-40 my-30 flex flex-col lg:items-start items-center">
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}

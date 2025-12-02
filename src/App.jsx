@@ -22,11 +22,16 @@ const App = () => {
 	const position = useRef({ x: 0, y: 0 });
 
 	useEffect(() => {
+		if (window.innerWidth < 1024) return; // lg = 1024px
+
 		const handleMouseMove = (e) => {
 			mouse.current.x = e.clientX;
 			mouse.current.y = e.clientY;
 		};
+
 		document.addEventListener("mousemove", handleMouseMove);
+
+		let animationFrameId;
 
 		const animate = () => {
 			position.current.x += (mouse.current.x - position.current.x) * 0.1;
@@ -35,22 +40,37 @@ const App = () => {
 			if (dotRef.current && outlineRef.current) {
 				dotRef.current.style.transform = `translate3d(${
 					mouse.current.x - 6
-				}px, ${mouse.current.y - 6}px,0)`;
+				}px, ${mouse.current.y - 6}px, 0)`;
+
 				outlineRef.current.style.transform = `translate3d(${
 					position.current.x - 20
-				}px, ${position.current.y - 20}px,0)`;
+				}px, ${position.current.y - 20}px, 0)`;
 			}
-			requestAnimationFrame(animate);
+
+			animationFrameId = requestAnimationFrame(animate);
 		};
+
 		animate();
+
 		return () => {
 			document.removeEventListener("mousemove", handleMouseMove);
+			cancelAnimationFrame(animationFrameId);
 		};
 	}, []);
+
+	const scrollRef = useRef(null);
+
 	return (
 		<>
-			<div className="bg-white dark:bg-[#0a0f0d]">
-				<NavBar theme={theme} setTheme={setTheme}  />
+			<div
+				ref={scrollRef}
+				className="bg-white dark:bg-[#0a0f0d] overflow-x-hidden no-scrollbar overflow-y-scroll h-screen"
+			>
+				<NavBar
+					theme={theme}
+					setTheme={setTheme}
+					scrollRef={scrollRef}
+				/>
 				<HomePage />
 				<Features />
 				<About />
@@ -60,15 +80,18 @@ const App = () => {
 				<Footer />
 
 				{/* Custom Cursor Ring */}
-				<div
-					ref={outlineRef}
-					className="fixed top-0 left-0 h-9 w-9 rounded-full border-2 border-blue-500 pointer-events-none z-[9999]"
-					style={{ transition: "transform 0.1s ease-out" }}
-				></div>
-				<div
-					ref={dotRef}
-					className="fixed top-0 left-0 h-3 w-3 rounded-full bg-blue-700 pointer-events-none z-[9999]"
-				></div>
+				<div className="hidden lg:block">
+					<div
+						ref={outlineRef}
+						className="fixed top-0 left-0 h-9 w-9 rounded-full border-2 border-blue-500 pointer-events-none z-[9999]"
+						style={{ transition: "transform 0.1s ease-out" }}
+					></div>
+
+					<div
+						ref={dotRef}
+						className="fixed top-0 left-0 h-3 w-3 rounded-full bg-blue-700 pointer-events-none z-[9999]"
+					></div>
+				</div>
 			</div>
 		</>
 	);

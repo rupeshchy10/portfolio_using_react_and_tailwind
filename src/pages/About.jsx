@@ -36,31 +36,40 @@ const About = () => {
 								Who is <FloatingName />
 							</div>
 
-							<motion.div
-								initial={{ opacity: 0, x: -30 }}
-								whileInView={{ opacity: 1, x: 0 }}
-								transition={{ duration: 0.8, delay: 0.6 }}
-								// viewport={{ once: false }}
-								className="my-4 space-y-2 text-justify"
-							>
-								<p>
+							<div className="my-4 space-y-2 text-justify">
+								<motion.p
+									initial={{ opacity: 0, x: -30 }}
+									whileInView={{ opacity: 1, x: 0 }}
+									transition={{ duration: 1.5, delay: 0.2 }}
+									// viewport={{ once: false }}
+								>
 									A Computer Engineering student from
 									Biratnagar, Nepal, passionate about sleek,
 									responsive web interfaces using React.js,
 									JavaScript, and Tailwind CSS.
-								</p>
-								<p>
+								</motion.p>
+								<motion.p
+									initial={{ opacity: 0, x: -30 }}
+									whileInView={{ opacity: 1, x: 0 }}
+									transition={{ duration: 1.5, delay: 0.4 }}
+									// viewport={{ once: false }}
+								>
 									Currently exploring backend development with
 									Node.js, Express, and PostgreSQL (PERN
 									stack) to understand full-stack concepts.
-								</p>
-								<p>
+								</motion.p>
+								<motion.p
+                                initial={{ opacity: 0, x: -30 }}
+									whileInView={{ opacity: 1, x: 0 }}
+									transition={{ duration: 1.5, delay: 0.6 }}
+									// viewport={{ once: false }}
+                                >
 									His goal is to start as a React.js developer
 									and gradually evolve into a full-stack
 									engineer while working on impactful
 									real-world projects.
-								</p>
-							</motion.div>
+								</motion.p>
+							</div>
 
 							<div className="flex flex-wrap gap-2 justify-center lg:justify-start">
 								{/* -------------Button Group---------- */}
