@@ -3,28 +3,10 @@ import { FaArrowRight } from "react-icons/fa";
 import { GiStaryu } from "react-icons/gi";
 import { motion } from "motion/react";
 import Typewriter from "../component/Typewriter";
-import SlidingText from "../component/SlidingText";
 import AnimatedName from "../component/AnimatedName";
-import FloatingName from "../component/FloatingName";
-import profile_pic from "../assets/images/Rup_profile.png"
+import profile_pic from "../assets/images/Rup_profile.png";
 
 const HomePage = () => {
-	// const skills = [
-	// 	"Frontend Developer",
-	// 	"Backend Developer",
-	// 	"PERN Stack Developer",
-	// ];
-
-	// const [index, setIndex] = useState(0);
-
-	// useEffect(() => {
-	// 	const interval = setInterval(() => {
-	// 		setIndex((prev) => (prev + 1) % skills.length);
-	// 	}, 2000);
-
-	// 	return () => clearInterval(interval);
-	// }, []);
-
 	return (
 		<div>
 			<div className="grid lg:grid-cols-2 grid-cols-1 justify-between mx-14">
@@ -109,13 +91,13 @@ const HomePage = () => {
 				</div>
 
 				{/* Image Right Portion */}
-				<div className="bg-blue- -mt-50 sm:mt-0">
-					{/* <div className="flex w-full mt-30 justify-center">
-						<img
-							src="../src/assets/images/abc1.png"
-							className="h-[600px] "
-						/>
-					</div> */}
+				<motion.div
+					initial={{ opacity: 0, scale: 0.9 }}
+					whileInView={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 0.5, delay: 0.4 }}
+					// viewport={{ once: false }}
+					className="bg-blue- -mt-50 sm:mt-0"
+				>
 					<div className="flex w-full lg:mt-24 md:-mt-30 sm:-mt-30 mt-20 justify-center">
 						<img
 							src={profile_pic}
@@ -123,7 +105,7 @@ const HomePage = () => {
 							alt="profile_pic"
 						/>
 					</div>
-				</div>
+				</motion.div>
 			</div>
 
 			<div>

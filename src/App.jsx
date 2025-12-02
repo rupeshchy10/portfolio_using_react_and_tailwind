@@ -73,7 +73,7 @@ const App = () => {
 				/>
 				<HomePage />
 				<Features />
-				<About />
+				<About theme={theme} />
 				<Education />
 				<Projects />
 				<Contact />

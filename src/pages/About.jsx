@@ -2,32 +2,33 @@ import React from "react";
 import { FaArrowCircleDown } from "react-icons/fa";
 import FloatingName from "../component/FloatingName";
 import { motion } from "motion/react";
-import dark_profile from "../assets/images/dark_profile.png"
+import dark_profile from "../assets/images/dark_profile.png";
+import light_profile from "../assets/images/light_profile.png";
 
-const About = () => {
+const About = ({theme}) => {
 	return (
 		<>
 			<div className="lg:h-[600px] bg-[#005427] dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] flex items-center justify-center text-white w-full">
 				<div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 px-5 md:px-10 lg:px-40 bg-green-">
 					{/* -----------------Image Left Portion------------- */}
-					<div className="w-full lg:mb-10  max-w-xs md:max-w-sm lg:max-w-sm md:h-[450px] lg:h-[500px] sm:mx-auto bg-yellow- flex justify-end items-end sm:justify-center">
+					<motion.div
+						initial={{ opacity: 0, scale: 0.9 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						transition={{ duration: 0.5, delay: 0.8 }}
+						// viewport={{ once: false }}
+						className="w-full lg:mb-10  max-w-xs md:max-w-sm lg:max-w-sm h-[300px] sm:h-[315px] md:h-[400px] lg:h-[500px] mx-auto bg-yellow- flex items-end justify-center"
+					>
 						<img
-							src={dark_profile}
+							src={
+								theme === "dark" ? dark_profile : light_profile
+							}
 							alt="profile_pic"
-							className="max-w-full max-h-full object-cover mb-10"
+							className="max-w-full max-h-full object-cover lg:mb-7 sm:-mb-10 -mb-7"
 						/>
-					</div>
-
-					{/* <div
-						className="w-full lg:mb-10 max-w-xs md:max-w-sm lg:max-w-sm md:h-[450px] lg:h-[500px] sm:mx-auto flex justify-end items-end sm:justify-center bg-center bg-no-repeat bg-contain"
-						style={{
-							backgroundImage:
-								"url('../src/assets/images/dark_profile.png')",
-						}}
-					></div> */}
+					</motion.div>
 
 					{/* ----------------Right portion-------------- */}
-					<div className="flex items-center mb-18 lg:mb-0">
+					<div className="flex items-center lg:my-18 md:my-15 sm:my-10 my-7 ">
 						<div className="w-full max-w-xl mx-auto lg:mx-0">
 							<div className="text-center lg:text-left ">
 								<span>--</span> About Me
@@ -60,11 +61,11 @@ const About = () => {
 									stack) to understand full-stack concepts.
 								</motion.p>
 								<motion.p
-                                initial={{ opacity: 0, x: -30 }}
+									initial={{ opacity: 0, x: -30 }}
 									whileInView={{ opacity: 1, x: 0 }}
 									transition={{ duration: 1.5, delay: 0.6 }}
 									// viewport={{ once: false }}
-                                >
+								>
 									His goal is to start as a React.js developer
 									and gradually evolve into a full-stack
 									engineer while working on impactful
