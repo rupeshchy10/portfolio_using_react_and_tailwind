@@ -109,17 +109,23 @@ const HomePage = () => {
 
 				{/* Image Right Portion */}
 				<div className="bg-blue- -mt-50 sm:mt-0">
-					<div className="flex w-full justify-center">
+					{/* <div className="flex w-full mt-30 justify-center">
 						<img
-							src="../src/assets/images/main_profile.png"
-							className="h-[700px]  "
+							src="../src/assets/images/abc1.png"
+							className="h-[600px] "
+						/>
+					</div> */}
+					<div className="flex w-full lg:mt-24 md:-mt-30 sm:-mt-30 mt-20 justify-center">
+						<img
+							src="../src/assets/images/Rup_profile.png"
+							className="lg:h-[550px] md:h-[450px] sm:h-[400px] h-[350px]"
 						/>
 					</div>
 				</div>
 			</div>
 
 			<div>
-				<div className="bg-yellow-500 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af] py-2.5 px-1 items-center z-10 relative flex overflow-hidden xl:-mt-5 lg:-mt-38">
+				<div className="bg-yellow-500 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af] py-2.5 px-1 items-center z-10 relative flex overflow-hidden xl:-mt-20 lg:-mt-38">
 					<marquee
 						behavior="scroll"
 						direction="left"
