@@ -20,14 +20,20 @@ const Projects = () => {
 					</span>
 				</motion.div>
 
-				<div className="flex items-center">
+				<motion.div
+					initial={{ opacity: 0, x: 30 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					transition={{ duration: 0.5, delay: 1 }}
+					// viewport={{ once: false }}
+					className="flex items-center"
+				>
 					<div className="flex border-yellow-500 dark:border-red-700 border-3 rounded-full px-6 py-1.5 bg-[#005427] dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-white font-semibold cursor-pointer z-10">
 						View My Projects
 					</div>
 					<button className="flex items-center justify-end bg-yellow-500 dark:bg-red-700  rounded-full py-1.5 px-1 -ml-9  z-0 shadow-lg w-17 border-3 border-yellow-500 dark:border-red-700 cursor-pointer">
 						<FaArrowRight className="text-black text-2xl p-1 rounded-2xl bg-white" />
 					</button>
-				</div>
+				</motion.div>
 			</div>
 
 			{/* Responsive Grid Section */}
@@ -41,14 +47,26 @@ const Projects = () => {
 						key={project.id}
 						className=" bg-gray-100 shadow-2xl dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] rounded-xl p-4 flex flex-col h-full"
 					>
-						<div className="h-[200px] sm:h-[250px] md:h-[300px] rounded-lg">
+						<motion.div
+							initial={{ opacity: 0, scale: 0.9 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 0.8, delay: 1 }}
+							// viewport={{ once: false }}
+							className="h-[200px] sm:h-[250px] md:h-[300px] rounded-lg"
+						>
 							<img
 								src={project.image}
 								alt={project.alt_pic}
 								className="object- w-full h-full shadow-md rounded-lg"
 							/>
-						</div>
-						<div className="flex gap-2 my-4">
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, scale: 0.9 }}
+							whileInView={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 0.6, delay: 1.3 }}
+							// viewport={{ once: false }}
+							className="flex gap-2 my-4"
+						>
 							{project.techs.map((tech, index) => (
 								<h2
 									key={index}
@@ -57,17 +75,29 @@ const Projects = () => {
 									{tech}
 								</h2>
 							))}
-						</div>
+						</motion.div>
 						<h1 className="md:font-bold font-semibold text-xl dark:text-white">
 							{project.title}
 						</h1>
 						<div className="flex md:justify-between justify-center md:mx-8 my-2 gap-4">
-							<button className="rounded-full bg-green-700 text-gray-300 p-1.5 sm:p-2 md:text-base text-sm font-semibold shadow-md cursor-pointer">
+							<motion.button
+								initial={{ opacity: 0, x: -30 }}
+								whileInView={{ opacity: 1, x: 0 }}
+								transition={{ duration: 0.5, delay: 1 }}
+								// viewport={{ once: false }}
+								className="rounded-full bg-green-700 text-gray-300 p-1.5 sm:p-2 md:text-base text-sm font-semibold shadow-md cursor-pointer"
+							>
 								View Code
-							</button>
-							<button className="font-semibold rounded-full p-1.5 bg-green-700 text-gray-300 shadow-md cursor-pointer">
+							</motion.button>
+							<motion.button
+								initial={{ opacity: 0, x: 30 }}
+								whileInView={{ opacity: 1, x: 0 }}
+								transition={{ duration: 0.5, delay: 1 }}
+								// viewport={{ once: false }}
+								className="font-semibold rounded-full p-1.5 bg-green-700 text-gray-300 shadow-md cursor-pointer"
+							>
 								Live Preview
-							</button>
+							</motion.button>
 						</div>
 					</motion.div>
 				))}

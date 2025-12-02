@@ -1,5 +1,5 @@
 // import { motion } from "framer-motion";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 import { FaMobileAlt, FaCode, FaRocket, FaBookOpen } from "react-icons/fa";
 
 const Features = () => {
@@ -57,18 +57,19 @@ const Features = () => {
 					{features.map((item, index) => (
 						<motion.div
 							key={index}
-							whileHover={{ scale: 1.05 }}
-                            			viewport={{ once: false }}
-
-							className="bg-gray-100 dark:bg-[#111827] p-6 rounded-2xl shadow-md text-center flex flex-col items-center gap-4"
+							initial={{ opacity: 0, y: -40 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: false }}
+							transition={{ duration: 1, delay: 0.5 }}
+							className="bg-gray-200 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] shadow-md p-6 rounded-2xl text-center flex flex-col items-center gap-4"
 						>
-							<div className="text-3xl text-blue-600 dark:text-blue-400">
+							<div className="text-4xl text-blue-600 dark:text-blue-400">
 								{item.icon}
 							</div>
-							<h3 className="font-semibold text-lg">
+							<h3 className="font-bold text-xl">
 								{item.title}
 							</h3>
-							<p className="text-sm text-gray-600 dark:text-gray-400">
+							<p className="text-md text-gray-600 dark:text-gray-400">
 								{item.desc}
 							</p>
 						</motion.div>
@@ -93,17 +94,16 @@ const Features = () => {
 };
 export default Features;
 
-
 function SkillBlock({ title, data }) {
 	return (
 		<motion.div
 			initial={{ opacity: 0, y: 40 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: false }}
-			transition={{ duration: 0.5 }}
-			className="bg-gray-100 dark:bg-[#111827] p-6 rounded-2xl shadow-md"
+			transition={{ duration: 1, delay: 0.5 }}
+			className="bg-gray-200 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] shadow-md p-6 rounded-2xl"
 		>
-			<h3 className="text-xl font-semibold mb-4">{title}</h3>
+			<h3 className="text-2xl font-bold mb-4">{title}</h3>
 			<ul className="space-y-2">
 				{data.map((skill, index) => (
 					<li
@@ -117,4 +117,3 @@ function SkillBlock({ title, data }) {
 		</motion.div>
 	);
 }
-

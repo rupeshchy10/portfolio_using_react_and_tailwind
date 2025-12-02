@@ -33,7 +33,7 @@ const HomePage = () => {
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.7 }}
-						viewport={{ once: false }}
+						// viewport={{ once: false }}
 						className="border-2 border-gray-500 w-26 flex items-center justify-center p-0.5 text-black dark:text-white "
 					>
 						Hello There!
@@ -49,7 +49,13 @@ const HomePage = () => {
 					</div>
 
 					{/* ------------Description------------- */}
-					<div className="text-center lg:text-left text-black dark:text-gray-400">
+					<motion.div
+						initial={{ opacity: 0, x: -30 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ duration: 0.5, delay: 0.4 }}
+						// viewport={{ once: false }}
+						className="text-center lg:text-left text-black dark:text-gray-400"
+					>
 						Passionate about crafting responsive, user-friendly web
 						applications with{" "}
 						<span className="font-bold text-black dark:text-red-500">
@@ -68,24 +74,36 @@ const HomePage = () => {
 							full-stack
 						</span>{" "}
 						development skills
-					</div>
+					</motion.div>
 
 					{/* --------------Button-------------- */}
 					<div className="flex flex-col sm:flex-row items-center justify-center  lg:justify-start my-6 space-x-10 space-y-4 sm:space-y-0">
 						{/* ----------------Button Group------------ */}
-						<div className="flex items-center">
+						<motion.div
+							initial={{ opacity: 0, x: -30 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							transition={{ duration: 0.6, delay: 0.2 }}
+							// viewport={{ once: false }}
+							className="flex items-center"
+						>
 							<button className="flex border-yellow-500 dark:border-red-700 border-3 rounded-full px-6 py-1.5 bg-[#005427] dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-white font-semibold cursor-pointer z-10">
 								View My Portfolio
 							</button>
 							<button className="flex items-center justify-end bg-yellow-500 dark:bg-red-700  rounded-full py-1.5 px-1 -ml-9 cursor-pointer z-0 shadow-lg w-17 border-3 border-yellow-500 dark:border-red-700">
 								<FaArrowRight className="text-black text-2xl p-1 rounded-2xl bg-white" />
 							</button>
-						</div>
+						</motion.div>
 
 						{/* ------------------"Get in Touch" Button--------------- */}
-						<div className="border-2 text-black dark:text-white border-black dark:border-red-700 rounded-4xl mr-10 sm:mr-0 px-3.5 h-10 flex items-center font-bold dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b]">
+						<motion.div
+							initial={{ opacity: 0, x: 30 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							transition={{ duration: 0.6, delay: 0.2 }}
+							// viewport={{ once: false }}
+							className="border-2 text-black dark:text-white border-black dark:border-red-700 rounded-4xl mr-10 sm:mr-0 px-3.5 h-10 flex items-center font-bold dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b]"
+						>
 							Get in Touch
-						</div>
+						</motion.div>
 					</div>
 				</div>
 

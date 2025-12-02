@@ -2,6 +2,7 @@ import { FaArrowRight, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { countries } from "../assets/assets";
+import { motion } from "motion/react";
 
 const Contact = () => {
 	return (
@@ -9,7 +10,13 @@ const Contact = () => {
 			<div className="bg-[#005427] dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] flex items-center justify-center text-white">
 				<div className="flex flex-col lg:flex-row justify-between my-15 lg:gap-20">
 					{/* Left Portion */}
-					<div className="mb-10 max-w-xl px-4 text-center lg:text-left">
+					<motion.div
+						initial={{ opacity: 0, x: -30 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ duration: 0.5, delay: 0.4 }}
+						// viewport={{ once: false }}
+						className="mb-10 max-w-xl px-4 text-center lg:text-left"
+					>
 						<h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
 							Let's Talk for{" "}
 							<span className="text-yellow-600 dark:text-green-600">
@@ -51,10 +58,16 @@ const Contact = () => {
 								</span>
 							</li>
 						</ul>
-					</div>
+					</motion.div>
 
 					{/* ---------------Right Portion------------ */}
-					<div className="bg-blue- flex flex-col col-span-2">
+					<motion.div
+						initial={{ opacity: 0, x: 30 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						transition={{ duration: 0.5, delay: 0.4 }}
+						// viewport={{ once: false }}
+						className="bg-blue- flex flex-col col-span-2"
+					>
 						{/* -------------NAME + EMAIL--------------- */}
 						<div className="flex flex-col md:flex-row m-4 gap-4">
 							<div className="flex flex-col md:w-1/2 w-full">
@@ -138,7 +151,7 @@ const Contact = () => {
 								<FaArrowRight className="text-black text-2xl p-1 rounded-2xl bg-white" />
 							</button>
 						</div>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</>

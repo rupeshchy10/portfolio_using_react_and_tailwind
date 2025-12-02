@@ -1,6 +1,7 @@
 import React from "react";
 import { FaArrowCircleDown } from "react-icons/fa";
 import FloatingName from "../component/FloatingName";
+import { motion } from "motion/react";
 
 const About = () => {
 	return (
@@ -32,11 +33,16 @@ const About = () => {
 							</div>
 
 							<div className="text-3xl md:text-4xl font-bold mt-2 text-center lg:text-left">
-								Who is{" "}
-                                    <FloatingName/>
+								Who is <FloatingName />
 							</div>
 
-							<div className="my-4 space-y-2 text-justify">
+							<motion.div
+								initial={{ opacity: 0, x: -30 }}
+								whileInView={{ opacity: 1, x: 0 }}
+								transition={{ duration: 0.8, delay: 0.6 }}
+								// viewport={{ once: false }}
+								className="my-4 space-y-2 text-justify"
+							>
 								<p>
 									A Computer Engineering student from
 									Biratnagar, Nepal, passionate about sleek,
@@ -54,23 +60,35 @@ const About = () => {
 									engineer while working on impactful
 									real-world projects.
 								</p>
-							</div>
+							</motion.div>
 
 							<div className="flex flex-wrap gap-2 justify-center lg:justify-start">
 								{/* -------------Button Group---------- */}
-								<div className="flex items-center">
+								<motion.div
+									initial={{ opacity: 0, x: -30 }}
+									whileInView={{ opacity: 1, x: 0 }}
+									transition={{ duration: 0.6, delay: 0.2 }}
+									// viewport={{ once: false }}
+									className="flex items-center"
+								>
 									<div className="flex border-yellow-500 dark:border-red-700 border-3 rounded-full px-6 py-1.5 bg-[#005427] dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-white font-semibold cursor-pointer z-10">
 										Download CV
 									</div>
 									<button className="flex items-center justify-end bg-yellow-500 dark:bg-red-700  rounded-full py-1.5 px-1 -ml-9 cursor-pointer z-0 shadow-lg w-17 border-3 border-yellow-500 dark:border-red-700">
 										<FaArrowCircleDown className="text-white text-2xl rounded-full bg-black" />
 									</button>
-								</div>
+								</motion.div>
 
 								{/* -------------Signature------------ */}
-								<div className="flex items-center border-2 mx-8 text-yellow-700 dark:text-red-700">
+								<motion.div
+									initial={{ opacity: 0, x: 30 }}
+									whileInView={{ opacity: 1, x: 0 }}
+									transition={{ duration: 0.6, delay: 0.2 }}
+									// viewport={{ once: false }}
+									className="flex items-center border-2 mx-8 text-yellow-700 dark:text-red-700"
+								>
 									Signature
-								</div>
+								</motion.div>
 							</div>
 						</div>
 					</div>
