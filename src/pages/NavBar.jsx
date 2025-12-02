@@ -41,7 +41,7 @@ const NavBar = ({ theme, setTheme, scrollRef }) => {
 					{/* Logo */}
 					<div className="text-xl sm:text-2xl font-bold m-2 flex justify-center items-center">
 						<span className="bg-yellow-500 dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] rounded-full w-10 h-10 flex justify-center items-center text-black dark:text-white shadow-[0_0_15px_rgba(59,130,246,0.6)] hover:shadow-[0_0_25px_rgba(59,130,246,0.9)]  mr-2 border-[#ED1C24] dark:border-2">
-							<img src="./Rup_logo.png"/>
+							<img src="./Rup_logo.png" alt="logo_pic" />
 						</span>
 						Rupesh
 						<span className="text-yellow-500 dark:text-[#3b82f6] dark:drop-shadow-[0_0_8px_rgba(59,130,246,0.8)] ml-1">

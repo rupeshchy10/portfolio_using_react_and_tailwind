@@ -119,6 +119,7 @@ const HomePage = () => {
 						<img
 							src="../src/assets/images/Rup_profile.png"
 							className="lg:h-[550px] md:h-[450px] sm:h-[400px] h-[350px]"
+							alt="profile_pic"
 						/>
 					</div>
 				</div>
