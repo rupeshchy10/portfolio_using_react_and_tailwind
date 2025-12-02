@@ -8,21 +8,21 @@ import AnimatedName from "../component/AnimatedName";
 import FloatingName from "../component/FloatingName";
 
 const HomePage = () => {
-	const skills = [
-		"Frontend Developer",
-		"Backend Developer",
-		"PERN Stack Developer",
-	];
+	// const skills = [
+	// 	"Frontend Developer",
+	// 	"Backend Developer",
+	// 	"PERN Stack Developer",
+	// ];
 
-	const [index, setIndex] = useState(0);
+	// const [index, setIndex] = useState(0);
 
-	useEffect(() => {
-		const interval = setInterval(() => {
-			setIndex((prev) => (prev + 1) % skills.length);
-		}, 2000);
+	// useEffect(() => {
+	// 	const interval = setInterval(() => {
+	// 		setIndex((prev) => (prev + 1) % skills.length);
+	// 	}, 2000);
 
-		return () => clearInterval(interval);
-	}, []);
+	// 	return () => clearInterval(interval);
+	// }, []);
 
 	return (
 		<div>
