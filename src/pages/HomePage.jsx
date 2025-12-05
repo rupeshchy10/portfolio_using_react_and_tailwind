@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import Typewriter from "../component/Typewriter";
 import AnimatedName from "../component/AnimatedName";
 import profile_pic from "../assets/images/Rup_profile.png";
+import resume_preview from "../assets/Resume_preview.pdf";
 
 const HomePage = () => {
 	return (
@@ -62,7 +63,10 @@ const HomePage = () => {
 					{/* --------------Button-------------- */}
 					<div className="flex flex-col sm:flex-row items-center justify-center  lg:justify-start my-6 space-x-10 space-y-4 sm:space-y-0">
 						{/* ----------------Button Group------------ */}
-						<motion.div
+						<motion.a
+							href={resume_preview}
+							target="_blank"
+							rel="noopener noreferrer"
 							initial={{ opacity: 0, x: -30 }}
 							whileInView={{ opacity: 1, x: 0 }}
 							transition={{ duration: 0.6, delay: 0.2 }}
@@ -75,7 +79,7 @@ const HomePage = () => {
 							<button className="flex items-center justify-end bg-yellow-500 dark:bg-red-700  rounded-full py-1.5 px-1 -ml-9 cursor-pointer z-0 shadow-lg w-17 border-3 border-yellow-500 dark:border-red-700">
 								<FaArrowRight className="text-black text-2xl p-1 rounded-2xl bg-white" />
 							</button>
-						</motion.div>
+						</motion.a>
 
 						{/* ------------------"Get in Touch" Button--------------- */}
 						<motion.button

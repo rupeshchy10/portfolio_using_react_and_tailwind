@@ -80,24 +80,50 @@ const Projects = () => {
 							{project.title}
 						</h1>
 						<div className="flex md:justify-between justify-center md:mx-8 my-2 gap-4">
-							<motion.button
+							<motion.a
+								href={
+									project.view_code
+										? project.view_code
+										: undefined
+								}
+								target={
+									project.view_code ? "_blank" : undefined
+								}
+								rel="noopener noreferrer"
 								initial={{ opacity: 0, x: -30 }}
 								whileInView={{ opacity: 1, x: 0 }}
 								transition={{ duration: 0.5, delay: 1 }}
 								// viewport={{ once: false }}
-								className="rounded-full bg-green-700 text-gray-300 p-1.5 sm:p-2 md:text-base text-sm font-semibold shadow-md cursor-pointer"
+								className={`rounded-full  p-1.5 sm:p-2 md:text-base text-sm font-semibold shadow-md text-center ${
+									project.view_code
+										? "bg-green-700 text-gray-300 cursor-pointer hover:scale-105 transition"
+										: "bg-gray-400 text-gray-200 cursor-not-allowed opacity-60 pointer-events-none"
+								}`}
 							>
 								View Code
-							</motion.button>
-							<motion.button
+							</motion.a>
+							<motion.a
+								href={
+									project.live_demo
+										? project.live_demo
+										: undefined
+								}
+								target={
+									project.live_demo ? "_blank" : undefined
+								}
+								rel="noopener noreferrer"
 								initial={{ opacity: 0, x: 30 }}
 								whileInView={{ opacity: 1, x: 0 }}
 								transition={{ duration: 0.5, delay: 1 }}
 								// viewport={{ once: false }}
-								className="font-semibold rounded-full p-1.5 bg-green-700 text-gray-300 shadow-md cursor-pointer"
+								className={`rounded-full  p-1.5 sm:p-2 md:text-base text-sm font-semibold shadow-md text-center ${
+									project.live_demo
+										? "bg-green-700 text-gray-300 cursor-pointer hover:scale-105 transition"
+										: "bg-gray-400 text-gray-200 cursor-not-allowed opacity-60 pointer-events-none"
+								}`}
 							>
 								Live Preview
-							</motion.button>
+							</motion.a>
 						</div>
 					</motion.div>
 				))}

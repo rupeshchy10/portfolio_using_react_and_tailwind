@@ -6,8 +6,9 @@ import dark_profile from "../assets/images/dark_profile.png";
 import light_profile from "../assets/images/light_profile.png";
 import light_sign from "../assets/images/light_sign.png";
 import dark_sign from "../assets/images/dark_sign.png";
+import resume_download from "../assets/Resume_download.pdf";
 
-const About = ({theme}) => {
+const About = ({ theme }) => {
 	return (
 		<>
 			<div className="lg:h-[600px] bg-[#005427] dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] flex items-center justify-center text-white w-full">
@@ -77,7 +78,11 @@ const About = ({theme}) => {
 
 							<div className="flex flex-wrap gap-2 justify-center lg:justify-start">
 								{/* -------------Button Group---------- */}
-								<motion.div
+								<motion.a
+									href={resume_download}
+									download
+									target="_blank"
+									rel="noopener noreferrer"
 									initial={{ opacity: 0, x: -30 }}
 									whileInView={{ opacity: 1, x: 0 }}
 									transition={{ duration: 0.6, delay: 0.2 }}
@@ -90,7 +95,7 @@ const About = ({theme}) => {
 									<button className="flex items-center justify-end bg-yellow-500 dark:bg-red-700  rounded-full py-1.5 px-1 -ml-9 cursor-pointer z-0 shadow-lg w-17 border-3 border-yellow-500 dark:border-red-700">
 										<FaArrowCircleDown className="text-white text-2xl rounded-full bg-black" />
 									</button>
-								</motion.div>
+								</motion.a>
 
 								{/* -------------Signature------------ */}
 								<motion.div
@@ -100,9 +105,14 @@ const About = ({theme}) => {
 									// viewport={{ once: false }}
 									className="ml-4"
 								>
-									<img src={
-								theme === "dark" ? dark_sign : light_sign
-							} className="w-25"/>
+									<img
+										src={
+											theme === "dark"
+												? dark_sign
+												: light_sign
+										}
+										className="w-25"
+									/>
 								</motion.div>
 							</div>
 						</div>

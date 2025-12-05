@@ -18,6 +18,9 @@ const projects = [
 		alt_pic: "Dish_Pic",
 		techs: ["HTML", "JavaScript", "CSS"],
 		description: "A disk picker website",
+
+		live_demo: "",
+		view_code: "",
 	},
 	{
 		id: 2,
@@ -26,6 +29,9 @@ const projects = [
 		alt_pic: "Imaginet_Pic",
 		techs: ["React", "Tailwind", "JavaScript"],
 		description: "Your Imagination, Our Creation.",
+
+		live_demo: "https://imaginet-agency-website.vercel.app/",
+		view_code: "https://github.com/rupeshchy10/imaginet_agency_website",
 	},
 	{
 		id: 3,
@@ -34,6 +40,10 @@ const projects = [
 		alt_pic: "PickZy_Pic",
 		techs: ["React", "Tailwind", "JavaScript"],
 		description: "An easy to pick anything website.",
+
+		live_demo: "https://pickzye-commercewebsite.vercel.app/",
+		view_code:
+			"https://github.com/rupeshchy10/PickZy-E-commerce-website-using-reactjs-and-tailwind",
 	},
 	{
 		id: 4,
@@ -43,6 +53,11 @@ const projects = [
 		techs: ["React", "Tailwind", "JavaScript"],
 		description:
 			"A portfolio reflecting my skills and journey to improvement",
+
+		live_demo:
+			"https://portfolio-using-react-and-tailwind-orcin.vercel.app/",
+		view_code:
+			"https://github.com/rupeshchy10/portfolio_using_react_and_tailwind",
 	},
 ];
 
