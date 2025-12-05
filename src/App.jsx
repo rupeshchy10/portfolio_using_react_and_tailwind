@@ -14,7 +14,7 @@ const App = () => {
 		localStorage.getItem("theme") ? localStorage.getItem("theme") : "dark"
 	);
 
-	const dotRef = useRef(null);
+	// const dotRef = useRef(null);
 	const outlineRef = useRef(null);
 
 	// Refs for custom cursor position tracking
@@ -37,14 +37,20 @@ const App = () => {
 			position.current.x += (mouse.current.x - position.current.x) * 0.1;
 			position.current.y += (mouse.current.y - position.current.y) * 0.1;
 
-			if (dotRef.current && outlineRef.current) {
-				dotRef.current.style.transform = `translate3d(${
-					mouse.current.x - 6
-				}px, ${mouse.current.y - 6}px, 0)`;
+			// if (dotRef.current && outlineRef.current) {
+			// 	dotRef.current.style.transform = `translate3d(${
+			// 		mouse.current.x - 6
+			// 	}px, ${mouse.current.y - 6}px, 0)`;
 
+			// 	outlineRef.current.style.transform = `translate3d(${
+			// 		position.current.x - 20
+			// 	}px, ${position.current.y - 20}px, 0)`;
+			// }
+
+			if (outlineRef.current) {
 				outlineRef.current.style.transform = `translate3d(${
-					position.current.x - 20
-				}px, ${position.current.y - 20}px, 0)`;
+					position.current.x - 17
+				}px, ${position.current.y - 17}px, 0)`;
 			}
 
 			animationFrameId = requestAnimationFrame(animate);
@@ -87,10 +93,10 @@ const App = () => {
 						style={{ transition: "transform 0.1s ease-out" }}
 					></div>
 
-					<div
+					{/* <div
 						ref={dotRef}
 						className="fixed top-0 left-0 h-3 w-3 rounded-full bg-blue-700 pointer-events-none z-[9999]"
-					></div>
+					></div> */}
 				</div>
 			</div>
 		</>

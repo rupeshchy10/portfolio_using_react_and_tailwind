@@ -4,6 +4,8 @@ import FloatingName from "../component/FloatingName";
 import { motion } from "motion/react";
 import dark_profile from "../assets/images/dark_profile.png";
 import light_profile from "../assets/images/light_profile.png";
+import light_sign from "../assets/images/light_sign.png";
+import dark_sign from "../assets/images/dark_sign.png";
 
 const About = ({theme}) => {
 	return (
@@ -96,9 +98,11 @@ const About = ({theme}) => {
 									whileInView={{ opacity: 1, x: 0 }}
 									transition={{ duration: 0.6, delay: 0.2 }}
 									// viewport={{ once: false }}
-									className="flex items-center border-2 mx-8 text-yellow-700 dark:text-red-700"
+									className="ml-4"
 								>
-									Signature
+									<img src={
+								theme === "dark" ? dark_sign : light_sign
+							} className="w-25"/>
 								</motion.div>
 							</div>
 						</div>
