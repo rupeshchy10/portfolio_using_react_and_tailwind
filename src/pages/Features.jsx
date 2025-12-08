@@ -1,6 +1,7 @@
 // import { motion } from "framer-motion";
 import { motion } from "motion/react";
 import { FaMobileAlt, FaCode, FaRocket, FaBookOpen } from "react-icons/fa";
+import MarqueeIcons from "../component/MarqueeIcons";
 
 const Features = () => {
 	const features = [
@@ -28,9 +29,8 @@ const Features = () => {
 
 	const frontendSkills = [
 		"React.js",
-		"JavaScript (ES6+)",
+		"JavaScript",
 		"HTML5",
-		"CSS3",
 		"Tailwind CSS",
 		"Framer Motion",
 	];
@@ -40,10 +40,10 @@ const Features = () => {
 		"VS Code",
 		"Vite",
 		"NPM",
-		"Netlify / Vercel",
+		"Vercel",
 	];
 
-	const learning = ["Node.js", "Express.js", "PostgreSQL", "Redux Toolkit"];
+	const learning = ["Node.js", "Express.js", "PostgreSQL"];
 
 	return (
 		<section id="features" className="bg-white dark:bg-[#0b0f1a] text-black dark:text-white px-6 md:px-12 py-16">

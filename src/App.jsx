@@ -8,6 +8,7 @@ import Projects from "./pages/Projects";
 import Features from "./pages/Features";
 import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
+import MarqueeIcons from "./component/MarqueeIcons";
 
 const App = () => {
 	const [theme, setTheme] = useState(
@@ -79,6 +80,7 @@ const App = () => {
 				/>
 				<HomePage />
 				<Features />
+                <MarqueeIcons/>
 				<About theme={theme} />
 				<Education />
 				<Projects />

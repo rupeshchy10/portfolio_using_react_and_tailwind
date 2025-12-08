@@ -143,8 +143,8 @@ const Contact = () => {
 						</div>
 
 						{/* ---------------SUBMIT------------- */}
-						<div className="flex items-center my-5 mx-4 md:justify-start sm:justify-center hover:scale-101 transition-all duration-100 cursor-pointer">
-							<div className="border-yellow-500 dark:border-red-700 border-2 rounded-full px-6 py-1.5 bg-[#005427] dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-white font-semibold cursor-pointer z-10">
+						<div className="flex items-center my-5 mx-4 md:justify-start sm:justify-center">
+							<div className="border-yellow-500 dark:border-red-700 border-2 rounded-full px-6 py-1.5 bg-[#005427] dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-white font-semibold cursor-pointer z-10  hover:scale-103 transition">
 								Submit
 							</div>
 							<button className="flex items-center justify-end bg-yellow-500 dark:bg-red-700  rounded-full py-1.5 px-1 -ml-9 cursor-pointer z-0 shadow-lg w-17 border-2 border-yellow-500 dark:border-red-700">

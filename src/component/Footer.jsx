@@ -92,6 +92,7 @@ const Footer = () => {
 						<a
 							href="https://github.com/rupeshchy10"
 							target="_blank"
+							rel="noopener noreferrer"
 							className="bg-yellow-500 dark:bg-green-600 text-black p-2 rounded-full hover:scale-110 transition"
 						>
 							<FaGithub />
@@ -100,6 +101,7 @@ const Footer = () => {
 						<a
 							href="https://www.linkedin.com/in/rupeshchy10/"
 							target="_blank"
+							rel="noopener noreferrer"
 							className="bg-yellow-500 dark:bg-green-600 text-black p-2 rounded-full hover:scale-110 transition"
 						>
 							<FaLinkedinIn />

@@ -1,7 +1,7 @@
 import sun_icon from "./images/sun_icon.svg";
 import moon_icon from "./images/moon_icon.svg";
 import Dish from "./images/Portfolio.png";
-import Imaginet from "./images/PickZy.png";
+import Imaginet from "./images/Imaginet.png";
 import PickZy from "./images/PickZy.png";
 import Portfolio from "./images/Portfolio.png";
 
@@ -14,19 +14,9 @@ const bannerWords = ["CREATE", "DEVELOP", "DESIGN", "LEARN", "BUILD", "INNOVATE"
 
 
 const projects = [
+	
 	{
 		id: 1,
-		title: "Dish Picker",
-		image: Dish,
-		alt_pic: "Dish_Pic",
-		techs: ["HTML", "JavaScript", "CSS"],
-		description: "A disk picker website",
-
-		live_demo: "",
-		view_code: "",
-	},
-	{
-		id: 2,
 		title: "Imaginet - Digital Agency Website",
 		image: Imaginet,
 		alt_pic: "Imaginet_Pic",
@@ -37,7 +27,7 @@ const projects = [
 		view_code: "https://github.com/rupeshchy10/imaginet_agency_website",
 	},
 	{
-		id: 3,
+		id: 2,
 		title: "PickZy - E-Commerce Website",
 		image: PickZy,
 		alt_pic: "PickZy_Pic",
@@ -49,7 +39,7 @@ const projects = [
 			"https://github.com/rupeshchy10/PickZy-E-commerce-website-using-reactjs-and-tailwind",
 	},
 	{
-		id: 4,
+		id: 3,
 		title: "Portfolio Website",
 		image: Portfolio,
 		alt_pic: "Portfolio_Pic",
@@ -61,6 +51,17 @@ const projects = [
 			"https://portfolio-using-react-and-tailwind-orcin.vercel.app/",
 		view_code:
 			"https://github.com/rupeshchy10/portfolio_using_react_and_tailwind",
+	},
+    {
+		id: 4,
+		title: "Dish Picker",
+		// image: Dish,
+		alt_pic: "Dish_Pic",
+		techs: ["HTML", "JavaScript", "CSS"],
+		description: "A disk picker website",
+
+		live_demo: "",
+		view_code: "",
 	},
 ];
 
