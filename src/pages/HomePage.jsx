@@ -6,10 +6,11 @@ import Typewriter from "../component/Typewriter";
 import AnimatedName from "../component/AnimatedName";
 import profile_pic from "../assets/images/Rup_profile.png";
 import resume_preview from "../assets/Resume_preview.pdf";
+import { bannerWords } from "../assets/assets";
 
 const HomePage = () => {
 	return (
-		<div>
+		<div id="home">
 			<div className="grid lg:grid-cols-2 grid-cols-1 justify-between mx-14">
 				{/* Left Description Portion */}
 				<div className="lg:my-40 my-30 flex flex-col lg:items-start items-center">
@@ -71,7 +72,7 @@ const HomePage = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							transition={{ duration: 0.6, delay: 0.2 }}
 							// viewport={{ once: false }}
-							className="flex items-center"
+							className="flex items-center hover:scale-103 transition-all duration-100"
 						>
 							<button className="flex border-yellow-500 dark:border-red-700 border-3 rounded-full px-6 py-1.5 bg-[#005427] dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-white font-semibold cursor-pointer z-10">
 								View My Resume
@@ -82,15 +83,17 @@ const HomePage = () => {
 						</motion.a>
 
 						{/* ------------------"Get in Touch" Button--------------- */}
-						<motion.button
-							initial={{ opacity: 0, x: 30 }}
-							whileInView={{ opacity: 1, x: 0 }}
-							transition={{ duration: 0.6, delay: 0.2 }}
-							// viewport={{ once: false }}
-							className="border-2 text-black dark:text-white border-black dark:border-red-700 rounded-4xl mr-10 sm:mr-0 px-3.5 h-10 flex items-center font-bold dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] cursor-pointer"
-						>
-							Get in Touch
-						</motion.button>
+						<a href="#contact">
+							<motion.button
+								initial={{ opacity: 0, x: 30 }}
+								whileInView={{ opacity: 1, x: 0 }}
+								transition={{ duration: 0.6, delay: 0.2 }}
+								// viewport={{ once: false }}
+								className="border-2 text-black dark:text-white border-black dark:border-red-700 rounded-4xl mr-10 sm:mr-0 px-3.5 h-10 flex items-center font-bold dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] cursor-pointer hover:scale-103 transition-all duration-100"
+							>
+								Get in Touch
+							</motion.button>
+						</a>
 					</div>
 				</div>
 
@@ -105,7 +108,7 @@ const HomePage = () => {
 					<div className="flex w-full lg:mt-24 md:-mt-30 sm:-mt-30 mt-20 justify-center">
 						<img
 							src={profile_pic}
-							className="lg:h-[550px] md:h-[450px] sm:h-[400px] h-[350px]"
+							className="lg:h-[550px] md:h-[450px] sm:h-[400px] h-[350px] hover:scale-105 transition-all duration-200"
 							alt="profile_pic"
 						/>
 					</div>
@@ -114,56 +117,24 @@ const HomePage = () => {
 
 			<div>
 				<div className="bg-yellow-500 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af] py-2.5 px-1 items-center z-10 relative flex overflow-hidden xl:-mt-20 lg:-mt-38">
-					<marquee
-						behavior="scroll"
-						direction="left"
-						scrollamount="5"
-						onMouseOver={(e) => e.currentTarget.stop()}
-						onMouseOut={(e) => e.currentTarget.start()}
-					>
-						<ul className="flex text-black dark:text-white justify-center md:justify-between items-center gap-1 md:gap-3 mx-8 font-bold">
+					<div className="overflow-hidden w-full">
+						<ul className="flex text-black dark:text-white justify-center md:justify-between items-center gap-1 md:gap-3 mx-8 font-bold animate-marquee whitespace-nowrap">
+							{/* First Star */}
 							<li className="text-lg md:text-xl">
 								<GiStaryu className="dark:text-[#ff4d4d] dark:drop-shadow-[0_0_8px_rgba(255,77,77,0.8)] transition-all duration-300" />
 							</li>
-
-							<li className="text-sm sm:text-base md:text-xl">
-								HTML
-							</li>
-							<li className="text-lg md:text-xl">
-								<GiStaryu className="dark:text-[#ff4d4d] dark:drop-shadow-[0_0_8px_rgba(255,77,77,0.8)] transition-all duration-300" />
-							</li>
-							<li className="text-sm sm:text-base md:text-xl">
-								CSS
-							</li>
-							<li className="text-lg md:text-xl">
-								<GiStaryu className="dark:text-[#ff4d4d] dark:drop-shadow-[0_0_8px_rgba(255,77,77,0.8)] transition-all duration-300" />
-							</li>
-							<li className="text-sm sm:text-base md:text-xl">
-								JavaScript
-							</li>
-							<li className="text-lg md:text-xl">
-								<GiStaryu className="dark:text-[#ff4d4d] dark:drop-shadow-[0_0_8px_rgba(255,77,77,0.8)] transition-all duration-300" />
-							</li>
-							<li className="text-sm sm:text-base md:text-xl">
-								ReactJS
-							</li>
-							<li className="text-lg md:text-xl">
-								<GiStaryu className="dark:text-[#ff4d4d] dark:drop-shadow-[0_0_8px_rgba(255,77,77,0.8)] transition-all duration-300" />
-							</li>
-							<li className="text-sm sm:text-base md:text-xl">
-								NodeJS
-							</li>
-							<li className="text-lg md:text-xl">
-								<GiStaryu className="dark:text-[#ff4d4d] dark:drop-shadow-[0_0_8px_rgba(255,77,77,0.8)] transition-all duration-300" />
-							</li>
-							<li className="text-sm sm:text-base md:text-xl">
-								PostgreSQL
-							</li>
-							<li className="text-lg md:text-xl">
-								<GiStaryu className="dark:text-[#ff4d4d] dark:drop-shadow-[0_0_8px_rgba(255,77,77,0.8)] transition-all duration-300" />
-							</li>
+							{bannerWords.map((word) => (
+								<React.Fragment key={word}>
+									<li className="text-sm sm:text-base md:text-xl italic">
+										{word}
+									</li>
+									<li className="text-lg md:text-xl">
+										<GiStaryu className="dark:text-[#ff4d4d] dark:drop-shadow-[0_0_8px_rgba(255,77,77,0.8)] transition-all duration-300" />
+									</li>
+								</React.Fragment>
+							))}
 						</ul>
-					</marquee>
+					</div>
 				</div>
 
 				<div className="bg-[#005427] dark:bg-red-700 -mt-12 h-12 z-0 items-center flex rotate-[-1deg]"></div>

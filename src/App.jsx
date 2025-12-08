@@ -4,10 +4,10 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Education from "./pages/Education";
 import HomePage from "./pages/HomePage";
-import NavBar from "./pages/NavBar";
 import Projects from "./pages/Projects";
 import Features from "./pages/Features";
-import Footer from "./pages/Footer";
+import NavBar from "./component/NavBar";
+import Footer from "./component/Footer";
 
 const App = () => {
 	const [theme, setTheme] = useState(

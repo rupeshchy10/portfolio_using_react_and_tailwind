@@ -46,7 +46,7 @@ const Features = () => {
 	const learning = ["Node.js", "Express.js", "PostgreSQL", "Redux Toolkit"];
 
 	return (
-		<section className="bg-white dark:bg-[#0b0f1a] text-black dark:text-white px-6 md:px-12 py-16">
+		<section id="features" className="bg-white dark:bg-[#0b0f1a] text-black dark:text-white px-6 md:px-12 py-16">
 			{/* FEATURES */}
 			<div className="max-w-6xl mx-auto mb-20">
 				<h2 className="text-3xl dark:text-blue-700 font-bold text-center mb-10">
@@ -61,7 +61,7 @@ const Features = () => {
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: false }}
 							transition={{ duration: 1, delay: 0.5 }}
-							className="bg-gray-200 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] shadow-md p-6 rounded-2xl text-center flex flex-col items-center gap-4"
+							className="bg-gray-200 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] shadow-md p-6 rounded-2xl text-center flex flex-col items-center gap-4 hover:scale-105 transition-all duration-200 cursor-pointer"
 						>
 							<div className="text-4xl text-green-700 dark:text-red-500">
 								{item.icon}
@@ -101,7 +101,7 @@ function SkillBlock({ title, data }) {
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: false }}
 			transition={{ duration: 1, delay: 0.5 }}
-			className="bg-gray-200 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] shadow-md p-6 rounded-2xl"
+			className="bg-gray-200 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] shadow-md p-6 rounded-2xl hover:scale-105 transition-all duration-200 cursor-pointer"
 		>
 			<h3 className="text-2xl font-bold mb-4">{title}</h3>
 			<ul className="space-y-2">

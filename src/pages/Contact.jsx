@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 const Contact = () => {
 	return (
 		<>
-			<div className="bg-[#005427] dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] flex items-center justify-center text-white">
+			<div id="contact" className="bg-[#005427] dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] flex items-center justify-center text-white">
 				<div className="flex flex-col lg:flex-row justify-between my-15 lg:gap-20">
 					{/* Left Portion */}
 					<motion.div
@@ -143,7 +143,7 @@ const Contact = () => {
 						</div>
 
 						{/* ---------------SUBMIT------------- */}
-						<div className="flex items-center my-5 mx-4 md:justify-start sm:justify-center">
+						<div className="flex items-center my-5 mx-4 md:justify-start sm:justify-center hover:scale-101 transition-all duration-100 cursor-pointer">
 							<div className="border-yellow-500 dark:border-red-700 border-2 rounded-full px-6 py-1.5 bg-[#005427] dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-white font-semibold cursor-pointer z-10">
 								Submit
 							</div>

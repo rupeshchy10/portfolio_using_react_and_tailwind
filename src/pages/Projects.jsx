@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 const Projects = () => {
 	return (
-		<div className="mt- px-6 sm:px-10 lg:px-14 py-10 ">
+		<div id="projects" className="mt- px-6 sm:px-10 lg:px-14 py-10 ">
 			{/* Title & Button Section */}
 			<div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
 				<motion.div
@@ -25,7 +25,7 @@ const Projects = () => {
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.5, delay: 1 }}
 					// viewport={{ once: false }}
-					className="flex items-center"
+					className="flex items-center hover:scale-103 transition-all duration-100 cursor-pointer"
 				>
 					<div className="flex border-yellow-500 dark:border-red-700 border-3 rounded-full px-6 py-1.5 bg-[#005427] dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-white font-semibold cursor-pointer z-10">
 						View My Projects
@@ -45,7 +45,7 @@ const Projects = () => {
 						transition={{ duration: 0.5, delay: project.id * 0.2 }}
 						viewport={{ once: false }}
 						key={project.id}
-						className=" bg-gray-100 shadow-2xl dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] rounded-xl p-4 flex flex-col h-full"
+						className=" bg-gray-100 shadow-2xl dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] rounded-xl p-4 flex flex-col h-full hover:scale-103 transition-all duration-200 cursor-pointer"
 					>
 						<motion.div
 							initial={{ opacity: 0, scale: 0.9 }}

@@ -10,6 +10,9 @@ const themeIcons = {
 	moon_icon,
 };
 
+const bannerWords = ["CREATE", "DEVELOP", "DESIGN", "LEARN", "BUILD", "INNOVATE"];
+
+
 const projects = [
 	{
 		id: 1,
@@ -273,4 +276,4 @@ const countries = [
 	"Zimbabwe",
 ];
 
-export { themeIcons, projects, educationData, countries };
+export { themeIcons, projects, educationData, countries,bannerWords };

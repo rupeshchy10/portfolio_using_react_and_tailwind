@@ -20,7 +20,7 @@ const ThemeToggleBtn = ({ theme, setTheme }) => {
 
 	return (
 		<>
-			<button>
+			<button className="hover:scale-105">
 				{theme === "dark" ? (
 					<img
 						onClick={() => setTheme("light")}

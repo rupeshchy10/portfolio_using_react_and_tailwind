@@ -11,7 +11,7 @@ import resume_download from "../assets/Resume_download.pdf";
 const About = ({ theme }) => {
 	return (
 		<>
-			<div className="lg:h-[600px] bg-[#005427] dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] flex items-center justify-center text-white w-full">
+			<div id="about" className="lg:h-[600px] bg-[#005427] dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] flex items-center justify-center text-white w-full">
 				<div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 px-5 md:px-10 lg:px-40 bg-green-">
 					{/* -----------------Image Left Portion------------- */}
 					<motion.div
@@ -19,7 +19,7 @@ const About = ({ theme }) => {
 						whileInView={{ opacity: 1, scale: 1 }}
 						transition={{ duration: 0.5, delay: 0.8 }}
 						// viewport={{ once: false }}
-						className="w-full lg:mb-10  max-w-xs md:max-w-sm lg:max-w-sm h-[300px] sm:h-[315px] md:h-[400px] lg:h-[500px] mx-auto bg-yellow- flex items-end justify-center"
+						className="w-full lg:mb-10  max-w-xs md:max-w-sm lg:max-w-sm h-[300px] sm:h-[315px] md:h-[400px] lg:h-[500px] mx-auto bg-yellow- flex items-end justify-center hover:scale-105 transition-all duration-150 cursor-pointer"
 					>
 						<img
 							src={
@@ -32,7 +32,7 @@ const About = ({ theme }) => {
 
 					{/* ----------------Right portion-------------- */}
 					<div className="flex items-center lg:my-18 md:my-15 sm:my-10 my-7 ">
-						<div className="w-full max-w-xl mx-auto lg:mx-0">
+						<div className="w-full max-w-xl mx-6 md:mx-auto lg:mx-0">
 							<div className="text-center lg:text-left ">
 								<span>--</span> About Me
 							</div>
@@ -87,7 +87,7 @@ const About = ({ theme }) => {
 									whileInView={{ opacity: 1, x: 0 }}
 									transition={{ duration: 0.6, delay: 0.2 }}
 									// viewport={{ once: false }}
-									className="flex items-center"
+									className="flex items-center hover:scale-105 transition-all duration-100 cursor-pointer"
 								>
 									<div className="flex border-yellow-500 dark:border-red-700 border-3 rounded-full px-6 py-1.5 bg-[#005427] dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-white font-semibold cursor-pointer z-10">
 										Download CV

@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedinIn, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => {
 	return (
-		<footer className="bg-[#005427] dark:bg-[#0f172a] text-white pb-5 px-6">
+		<footer className="bg-green-800 dark:bg-[#0f172a] text-white pb-5 px-6">
 			<div className=" border-t border-gray-600 mb-6" />
 			<motion.div
 				initial={{ opacity: 0, y: 50 }}
@@ -90,14 +90,16 @@ const Footer = () => {
 					{/* Social Icons */}
 					<div className="flex gap-4 mt-5">
 						<a
-							href="#"
+							href="https://github.com/rupeshchy10"
+							target="_blank"
 							className="bg-yellow-500 dark:bg-green-600 text-black p-2 rounded-full hover:scale-110 transition"
 						>
 							<FaGithub />
 						</a>
 
 						<a
-							href="#"
+							href="https://www.linkedin.com/in/rupeshchy10/"
+							target="_blank"
 							className="bg-yellow-500 dark:bg-green-600 text-black p-2 rounded-full hover:scale-110 transition"
 						>
 							<FaLinkedinIn />
@@ -112,7 +114,7 @@ const Footer = () => {
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 0.5, delay: 0.4 }}
 				viewport={{ once: false }}
-				className="border-t border-gray-600 mt-6 pt-5 text-center text-gray-400 text-sm"
+				className="border-t border-gray-300 dark:border-gray-600 mt-6 pt-5 text-center text-gray-400 text-sm"
 			>
 				© {new Date().getFullYear()} Rupesh Choudhary — All Rights
 				Reserved.
