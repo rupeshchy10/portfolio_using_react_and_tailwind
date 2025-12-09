@@ -1,7 +1,5 @@
-// import { motion } from "framer-motion";
 import { motion } from "motion/react";
 import { FaMobileAlt, FaCode, FaRocket, FaBookOpen } from "react-icons/fa";
-import MarqueeIcons from "../component/MarqueeIcons";
 
 const Features = () => {
 	const features = [
@@ -76,6 +74,7 @@ const Features = () => {
 					))}
 				</div>
 			</div>
+
 
 			{/* SKILLS */}
 			<div className="max-w-6xl mx-auto">
