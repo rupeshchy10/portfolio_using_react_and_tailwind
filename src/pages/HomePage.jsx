@@ -25,7 +25,7 @@ const HomePage = () => {
 					</motion.div>
 
 					{/* ------------Title Naming----------- */}
-					<div className="md:text-5xl sm:text-4xl text-5xl font-bold my-6 space-y-2 text-black dark:text-gray-300 text-center lg:text-left">
+					<div className="text-5xl sm:text-4xl md:text-5xl  lg:text-4xl xl:text-5xl font-bold my-6 space-y-2 text-black dark:text-gray-300 text-center lg:text-left">
 						<p>
 							I'm <AnimatedName />
 						</p>
@@ -103,12 +103,12 @@ const HomePage = () => {
 					whileInView={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.5, delay: 0.4 }}
 					// viewport={{ once: false }}
-					className="bg-blue- -mt-50 sm:mt-0"
+					className="-mt-50 sm:mt-0"
 				>
 					<div className="flex w-full lg:mt-24 md:-mt-30 sm:-mt-30 mt-20 justify-center">
 						<img
 							src={profile_pic}
-							className="lg:h-[550px] md:h-[450px] sm:h-[400px] h-[350px] hover:scale-105 transition-all duration-200"
+							className="h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px] hover:scale-105 transition-all duration-200"
 							alt="profile_pic"
 						/>
 					</div>
@@ -118,17 +118,14 @@ const HomePage = () => {
 			<div>
 				<div className="bg-yellow-500 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af] py-2.5 px-1 items-center z-10 relative flex overflow-hidden xl:-mt-20 lg:-mt-38">
 					<div className="overflow-hidden w-full">
-						<ul className="flex text-black dark:text-white justify-center md:justify-between items-center gap-1 md:gap-3 mx-8 font-bold animate-marquee whitespace-nowrap">
-							{/* First Star */}
-							<li className="text-lg md:text-xl">
+						<ul className="flex text-black dark:text-white justify-center md:justify-between items-center gap-1.5 md:gap-3 sm:mx-8 font-bold animate-marquee whitespace-nowrap text-[10px] sm:text-base md:text-lg lg:text-xl">
+							<li className="">
 								<GiStaryu className="dark:text-[#ff4d4d] dark:drop-shadow-[0_0_8px_rgba(255,77,77,0.8)] transition-all duration-300" />
 							</li>
 							{bannerWords.map((word) => (
 								<React.Fragment key={word}>
-									<li className="text-sm sm:text-base md:text-xl italic">
-										{word}
-									</li>
-									<li className="text-lg md:text-xl">
+									<li className=" italic">{word}</li>
+									<li className="">
 										<GiStaryu className="dark:text-[#ff4d4d] dark:drop-shadow-[0_0_8px_rgba(255,77,77,0.8)] transition-all duration-300" />
 									</li>
 								</React.Fragment>
@@ -137,7 +134,11 @@ const HomePage = () => {
 					</div>
 				</div>
 
-				<div className="bg-[#005427] dark:bg-red-700 -mt-12 h-12 z-0 items-center flex rotate-[-1deg]"></div>
+
+             
+
+
+				<div className="bg-[#005427] dark:bg-red-700 -mt-9 sm:-mt-11 md:-mt-12 h-9 sm:h-11 md:h-12 z-0 items-center flex rotate-[-1deg]"></div>
 			</div>
 		</div>
 	);
