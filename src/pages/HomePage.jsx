@@ -25,7 +25,7 @@ const HomePage = () => {
 					</motion.div>
 
 					{/* ------------Title Naming----------- */}
-					<div className="text-5xl font-bold my-6 space-y-2 text-black dark:text-gray-300 text-center lg:text-left">
+					<div className="md:text-5xl sm:text-4xl text-5xl font-bold my-6 space-y-2 text-black dark:text-gray-300 text-center lg:text-left">
 						<p>
 							I'm <AnimatedName />
 						</p>
