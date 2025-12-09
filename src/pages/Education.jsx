@@ -10,7 +10,7 @@ const Education = () => {
 					🎓 My <span className="text-yellow-500 dark:text-blue-700">Education</span>
 				</h2>
 
-				<div className="relative flex gap-10 bg-red- mx-15">
+				<div className="relative flex gap-10 mx-10 sm:mx-15">
 					{/* Vertical Line */}
 					<div className="absolute left-2 md:left-10 lg:left-20 top-0 w-1.5 h-full bg-gray-300 dark:bg-gray-500"/>
 
@@ -29,10 +29,11 @@ const Education = () => {
 								className="relative"
 							>
 								{/* Horizontal Line */}
-								<div className="absolute left-[-24px] md:left-[-91px] lg:left-[-132px] top-21 lg:top-23 w-6 md:w-23 lg:w-33 h-1.5 bg-gray-300 dark:bg-gray-500"/>
+								<div className="absolute left-[-24px] md:left-[-91px] lg:left-[-132px] top-28 sm:top-22 md:top-22 lg:top-24 xl:top-23 w-6 md:w-23 lg:w-33 h-1.5 bg-gray-300 dark:bg-gray-500"/>
 
 								{/* Dot */}
-								<div className="absolute left-[-34px] md:left-[-101px] lg:left-[-141px] top-20 lg:top-22 w-4 h-4 md:w-4 md:h-4 rounded-full bg-white border-4 border-gray-300 dark:border-gray-500 dark:bg-[#0b0f1a]"/>
+                                {/* 485-639 */}
+								<div className="absolute left-[-34px] md:left-[-101px] lg:left-[-141px] top-27 sm:top-21 md:top-21 lg:top-23 xl:top-22 w-4 h-4 md:w-4 md:h-4 rounded-full bg-white border-4 border-gray-300 dark:border-gray-500 dark:bg-[#0b0f1a]"/>
 
 								{/* Card */}
 								<div className="border border-gray-300 dark:border-gray-700 rounded-lg p-5 lg:p-7 bg-gray-200 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af] shadow-md w-full max-w-xl hover:scale-105 hover:border-gray-500 transition-all duration- cursor-pointer">

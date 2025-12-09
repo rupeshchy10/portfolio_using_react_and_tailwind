@@ -3,6 +3,13 @@ import { motion } from "motion/react";
 import { FaGithub, FaLinkedinIn, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => {
+	const menus = [
+		{ label: "Home", href: "#home" },
+		{ label: "Features", href: "#features" },
+		{ label: "About", href: "#about" },
+		{ label: "Education", href: "#education" },
+		{ label: "Projects", href: "#projects" },
+	];
 	return (
 		<footer className="bg-green-800 dark:bg-[#0f172a] text-white pb-5 px-6">
 			<div className=" border-t border-gray-600 mb-6" />
@@ -42,24 +49,16 @@ const Footer = () => {
 					</h3>
 
 					<ul className="space-y-2 text-gray-300">
-						<li className="hover:text-yellow-400 dark:hover:text-green-600 cursor-pointer">
-							Home
-						</li>
-						<li className="hover:text-yellow-400 dark:hover:text-green-600 cursor-pointer">
-							Features
-						</li>
-						<li className="hover:text-yellow-400 dark:hover:text-green-600 cursor-pointer">
-							About
-						</li>
-						<li className="hover:text-yellow-400 dark:hover:text-green-600 cursor-pointer">
-							Skills
-						</li>
-						<li className="hover:text-yellow-400 dark:hover:text-green-600 cursor-pointer">
-							Projects
-						</li>
-						<li className="hover:text-yellow-400 dark:hover:text-green-600 cursor-pointer">
-							Contact Me
-						</li>
+						{menus.map((menu) => (
+							<li key={menu.label}>
+								<a
+									href={menu.href}
+									className="hover:text-yellow-400 dark:hover:text-green-600 cursor-pointer"
+								>
+									{menu.label}
+								</a>
+							</li>
+						))}
 					</ul>
 				</div>
 
