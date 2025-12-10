@@ -32,11 +32,10 @@ const Education = () => {
 								<div className="absolute left-[-24px] md:left-[-91px] lg:left-[-132px] top-28 sm:top-22 md:top-22 lg:top-24 xl:top-23 w-6 md:w-23 lg:w-33 h-1.5 bg-gray-300 dark:bg-gray-500"/>
 
 								{/* Dot */}
-                                {/* 485-639 */}
 								<div className="absolute left-[-34px] md:left-[-101px] lg:left-[-141px] top-27 sm:top-21 md:top-21 lg:top-23 xl:top-22 w-4 h-4 md:w-4 md:h-4 rounded-full bg-white border-4 border-gray-300 dark:border-gray-500 dark:bg-[#0b0f1a]"/>
 
 								{/* Card */}
-								<div className="border border-gray-300 dark:border-gray-700 rounded-lg p-5 lg:p-7 bg-gray-200 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af] shadow-md w-full max-w-xl hover:scale-105 hover:border-gray-500 transition-all duration- cursor-pointer">
+								<div className="border border-gray-300 dark:border-gray-700 rounded-lg p-5 lg:p-7 bg-gray-200 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#1e40af] shadow-md w-full max-w-xl hover:scale-105 dark:hover:border-gray-500 transition-all duration- cursor-pointer">
 									<h3 className="text-sm text-gray-500 border-gray-400 dark:border-gray-400 dark:text-gray-400 mb-1 border-t-3">
 										{item.year}
 									</h3>
