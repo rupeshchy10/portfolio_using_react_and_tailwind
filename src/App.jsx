@@ -9,6 +9,7 @@ import Features from "./pages/Features";
 import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
 import MarqueeIcons from "./component/MarqueeIcons";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
 	const [theme, setTheme] = useState(
@@ -77,16 +78,16 @@ const App = () => {
 					theme={theme}
 					setTheme={setTheme}
 					scrollRef={scrollRef}
-				/>
+				/>{" "}
 				<HomePage />
 				<Features />
-                <MarqueeIcons/>
+				<MarqueeIcons />
 				<About theme={theme} />
 				<Education />
 				<Projects />
+				<Toaster />
 				<Contact />
 				<Footer />
-
 				{/* Custom Cursor Ring */}
 				<div className="hidden lg:block">
 					<div
