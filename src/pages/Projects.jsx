@@ -20,17 +20,32 @@ const Projects = () => {
 					</span>
 				</motion.div>
 
-				<motion.div
+				{/* <motion.div
 					initial={{ opacity: 0, x: 30 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.5, delay: 1 }}
 					// viewport={{ once: false }}
 					className="flex items-center hover:scale-103 transition-all duration-100 cursor-pointer"
 				>
-					<div className="flex border-yellow-500 dark:border-red-700 border-3 rounded-full px-6 py-1.5 bg-[#005427] dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-white font-semibold cursor-pointer z-10">
+					<div className="flex border-yellow-500 dark:border-red-700 border-3 rounded-full px-6 py-1.5 bg-[#005427] dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-white font-semibold cursor-pointer z-10 ">
 						View My Projects
 					</div>
 					<button className="flex items-center justify-end bg-yellow-500 dark:bg-red-700  rounded-full py-1.5 px-1 -ml-9  z-0 shadow-lg w-17 border-3 border-yellow-500 dark:border-red-700 cursor-pointer">
+						<FaArrowRight className="text-black text-2xl p-1 rounded-2xl bg-white" />
+					</button>
+				</motion.div> */}
+                
+                <motion.div
+					initial={{ opacity: 0, x: 30 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					transition={{ duration: 0.5, delay: 1 }}
+					// viewport={{ once: false }}
+					className="flex items-center transition-all duration-100"
+				>
+					<div className="flex border-gray-500 border-3 rounded-full px-6 py-1.5 bg-gray-300 text-gray-600 font-semibold cursor-not-allowed z-10">
+						View All Projects
+					</div>
+					<button className="flex items-center justify-end bg-gray-500  rounded-full py-1.5 px-1 -ml-9  z-0 shadow-lg w-17 border-3 border-gray-500 cursor-not-allowed">
 						<FaArrowRight className="text-black text-2xl p-1 rounded-2xl bg-white" />
 					</button>
 				</motion.div>
@@ -52,13 +67,19 @@ const Projects = () => {
 							whileInView={{ opacity: 1, scale: 1 }}
 							transition={{ duration: 0.8, delay: 1 }}
 							// viewport={{ once: false }}
-							className="h-[200px] sm:h-[250px] md:h-[300px] rounded-lg"
+							className="h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex items-center justify-center bg-zinc-200 dark:bg-zinc-800"
 						>
-							<img
-								src={project.image}
-								alt={project.alt_pic}
-								className="object- w-full h-full shadow-md rounded-lg"
-							/>
+							{project.image ? (
+    <img
+      src={project.image}
+      alt={project.alt_pic}
+      className="object- w-full h-full shadow-md rounded-lg dark:text-white"
+    />
+  ) : (
+    <span className="text-zinc-700 dark:text-white text-xl font-semibold">
+      Coming Soon....
+    </span>
+  )}
 						</motion.div>
 						<motion.div
 							initial={{ opacity: 0, scale: 0.9 }}
@@ -97,7 +118,7 @@ const Projects = () => {
 								className={`rounded-full  p-1.5 sm:p-2 md:text-base text-sm font-semibold shadow-md text-center ${
 									project.view_code
 										? "bg-green-700 text-gray-300 cursor-pointer hover:scale-105 transition"
-										: "bg-gray-400 text-gray-200 cursor-not-allowed opacity-60 pointer-events-none"
+										: "cursor-not-allowed bg-gray-300 text-gray-600 opacity-60 pointer-events-none"
 								}`}
 							>
 								View Code
@@ -119,7 +140,7 @@ const Projects = () => {
 								className={`rounded-full  p-1.5 sm:p-2 md:text-base text-sm font-semibold shadow-md text-center ${
 									project.live_demo
 										? "bg-green-700 text-gray-300 cursor-pointer hover:scale-105 transition"
-										: "bg-gray-400 text-gray-200 cursor-not-allowed opacity-60 pointer-events-none"
+										: "bg-gray-300 text-gray-600 cursor-not-allowed opacity-60 pointer-events-none"
 								}`}
 							>
 								Live Preview
