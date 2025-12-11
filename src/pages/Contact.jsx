@@ -72,8 +72,14 @@ const Contact = () => {
 
 							<li className="flex flex-col sm:flex-row items-center sm:items-start gap-3">
 								<FaLinkedinIn className="min-w-[32px] min-h-[32px] p-2 rounded-full bg-yellow-500 dark:bg-green-600 text-black" />
-								<span className="text-center sm:text-left">
-									LinkedIn
+								<span className="text-center sm:text-left hover:underline">
+									<a
+										href="https://www.linkedin.com/in/rupeshchy10/"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										rupeshchy10
+									</a>
 								</span>
 							</li>
 
@@ -175,7 +181,7 @@ const Contact = () => {
 							</label>
 							<textarea
 								name="message"
-                                required
+								required
 								placeholder="Enter here..."
 								className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] rounded-lg w-full h-40 p-2 resize-none align-top dark:bg-blue-900 dark:border-blue-800 dark:border"
 							/>

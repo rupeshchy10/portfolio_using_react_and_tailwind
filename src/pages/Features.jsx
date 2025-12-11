@@ -58,7 +58,7 @@ const Features = () => {
 							initial={{ opacity: 0, y: -40 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: false }}
-							transition={{ duration: 1, delay: 0.5 }}
+							transition={{ duration: 0.6, delay: 0.2 }}
 							className="bg-gray-200 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] shadow-md p-6 rounded-2xl text-center flex flex-col items-center gap-4 hover:scale-105 transition-all duration-200 cursor-pointer"
 						>
 							<div className="text-4xl text-green-700 dark:text-red-500">
@@ -99,7 +99,7 @@ function SkillBlock({ title, data }) {
 			initial={{ opacity: 0, y: 40 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: false }}
-			transition={{ duration: 1, delay: 0.5 }}
+			transition={{ duration: 0.6, delay: 0.2 }}
 			className="bg-gray-200 dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] shadow-md p-6 rounded-2xl hover:scale-105 transition-all duration-200 cursor-pointer"
 		>
 			<h3 className="text-2xl font-bold mb-4">{title}</h3>
