@@ -1,16 +1,82 @@
-# React + Vite
+# 🚀 Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal **Portfolio Website** built using **React.js** and **Tailwind CSS**.  
+The portfolio showcases my skills, projects, and experience as a frontend developer.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🖥️ Tech Stack
 
-## React Compiler
+### **Frontend**
+- ⚛️ React.js  
+- 🎨 Tailwind CSS  
+- 🌙 Dark Mode Support
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### **Tools & Libraries**
+- React Icons  
+- Git & GitHub  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📁 Features
+
+- Fully **responsive design**  
+- Clean and modern UI  
+- **Projects Showcase** section  
+- **Skills** & **Education** section  
+- **Dark/Light mode** toggle  
+- **Reusable components**  
+- **Fast performance** with React + Tailwind  
+
+---
+
+## 📸 Screenshots
+
+![Portfolio Sample](src/assets/images/Portfolio.png)
+
+
+---
+
+## ⚙️ Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/rupeshchy10/portfolio_using_react_and_tailwind.git
+
+# Go into the project directory
+cd portfolio_using_react_and_tailwind
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+---
+
+## ✨ About Me
+
+Hi, I'm **Rupesh Choudhary** — a passionate **Web Developer** with a strong focus on  
+**React.js**, **JavaScript**, and **Tailwind CSS**. I’m currently expanding my skills in  
+**Node.js**, **PostgreSQL**, and backend development as I work toward becoming a  
+**Full Stack Developer**.
+
+I enjoy crafting clean, responsive, and user-friendly web applications that blend  
+functionality with great user experience.
+
+This portfolio reflects my learning journey, the projects I've built, and the  
+skills I continue to refine every day.
+
+
+---
+
+## 📬 Contact
+
+Feel free to reach out!
+
+- 📧 **Email:** rupevilary1010@gmail.com  
+- 🔗 **LinkedIn:** [linkedin.com/in/rupeshchy10](https://linkedin.com/in/rupeshchy10)  
+- 🐙 **GitHub:** [github.com/rupeshchy10](https://github.com/rupeshchy10)
+
+---
