@@ -1,0 +1,77 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200..800&display=swap"); */
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+
+* {
+	font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+
+    /* cursor: none; */
+}
+
+/* Hide vertical scrollbar but allow scrolling */
+.no-scrollbar {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE / Edge */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;                 /* Chrome, Safari */
+}
+
+.nav-link {
+  position: relative;
+  /* padding: 0 0 0 0; */
+  display: inline-block;
+}
+
+/* ===== LIGHT MODE BORDERS ===== */
+
+/* Top border */
+.nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1.5px;
+  width: 0;
+  background: #F59E0B;
+  transition: width 0.3s ease;
+}
+
+/* Bottom border */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 1.5px;
+  width: 0;
+  background: #F59E0B;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
+/* ===== DARK MODE BORDERS ===== */
+
+.dark .nav-link::before {
+  background: #60a5fa; /* blue-400 */
+}
+
+.dark .nav-link::after {
+  background: #60a5fa;
+}
