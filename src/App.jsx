@@ -9,6 +9,7 @@ import Features from "./pages/Features";
 import NavBar from "./component/NavBar";
 import Footer from "./component/Footer";
 import MarqueeIcons from "./component/MarqueeIcons";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
 	const [theme, setTheme] = useState(
@@ -73,6 +74,7 @@ const App = () => {
 				ref={scrollRef}
 				className="bg-white dark:bg-[#0a0f0d] overflow-x-hidden no-scrollbar overflow-y-scroll h-screen"
 			>
+                <Toaster/>
 				<NavBar
 					theme={theme}
 					setTheme={setTheme}

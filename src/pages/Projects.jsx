@@ -20,11 +20,13 @@ const Projects = () => {
 					</span>
 				</motion.div>
 
-				<motion.div
+				<motion.a
+					href="https://github.com/rupeshchy10"
+					target="_blank"
+					rel="noopener noreferrer"
 					initial={{ opacity: 0, x: 30 }}
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.5, delay: 1 }}
-					// viewport={{ once: false }}
 					className="flex items-center hover:scale-103 transition-all duration-100 cursor-pointer"
 				>
 					<div className="flex border-yellow-500 dark:border-red-700 border-3 rounded-full px-6 py-1.5 bg-[#005427] dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-white font-semibold cursor-pointer z-10">
@@ -33,7 +35,7 @@ const Projects = () => {
 					<button className="flex items-center justify-end bg-yellow-500 dark:bg-red-700  rounded-full py-1.5 px-1 -ml-9  z-0 shadow-lg w-17 border-3 border-yellow-500 dark:border-red-700 cursor-pointer">
 						<FaArrowRight className="text-black text-2xl p-1 rounded-2xl bg-white" />
 					</button>
-				</motion.div>
+				</motion.a>
 			</div>
 
 			{/* Responsive Grid Section */}

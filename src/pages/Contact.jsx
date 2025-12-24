@@ -3,11 +3,40 @@ import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { countries } from "../assets/assets";
 import { motion } from "motion/react";
+import toast from "react-hot-toast";
 
 const Contact = () => {
+	const onSubmit = async (event) => {
+		event.preventDefault();
+
+		const formData = new FormData(event.target);
+
+		formData.append("access_key", "a2193fd8-e86e-4ce9-b67a-be854f1d2894");
+
+		try {
+			const response = await fetch("https://api.web3forms.com/submit", {
+				method: "POST",
+				body: formData,
+			});
+
+			const data = await response.json();
+
+			if (data.success) {
+				toast.success("Thank you for your submission!");
+				event.target.reset();
+			} else {
+				toast.error(data.message);
+			}
+		} catch (error) {
+			toast.error(error.message);
+		}
+	};
 	return (
 		<>
-			<div id="contact" className="bg-[#005427] dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] flex items-center justify-center text-white">
+			<div
+				id="contact"
+				className="bg-[#005427] dark:bg-gradient-to-r dark:from-[#0f172a] dark:via-[#1e3a8a] dark:to-[#0f172a] flex items-center justify-center text-white"
+			>
 				<div className="flex flex-col lg:flex-row justify-between my-15 lg:gap-20">
 					{/* Left Portion */}
 					<motion.div
@@ -61,12 +90,13 @@ const Contact = () => {
 					</motion.div>
 
 					{/* ---------------Right Portion------------ */}
-					<motion.div
+					<motion.form
+						onSubmit={onSubmit}
 						initial={{ opacity: 0, x: 30 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.5, delay: 0.4 }}
 						// viewport={{ once: false }}
-						className="bg-blue- flex flex-col col-span-2"
+						className="flex flex-col col-span-2"
 					>
 						{/* -------------NAME + EMAIL--------------- */}
 						<div className="flex flex-col md:flex-row m-4 gap-4">
@@ -77,8 +107,10 @@ const Contact = () => {
 								</label>
 								<input
 									type="text"
+									name="name"
 									placeholder="Ex. John Smith"
 									className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] dark:bg-blue-900 dark:border-blue-800 dark:border-1 rounded-lg p-2"
+									required
 								/>
 							</div>
 							<div className="flex flex-col md:w-1/2 w-full">
@@ -88,8 +120,10 @@ const Contact = () => {
 								</label>
 								<input
 									type="email"
+									name="email"
 									placeholder="example123@gmail.com"
 									className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] dark:bg-blue-900 dark:border-blue-800 dark:border-1 rounded-lg p-2"
+									required
 								/>
 							</div>
 						</div>
@@ -103,9 +137,12 @@ const Contact = () => {
 									<span className="text-red-500">*</span>
 								</label>
 								<input
-									type="text"
-									placeholder="Ex. John Smith"
+									type="tel"
+									pattern="^\+?[0-9]{7,15}$"
+									placeholder="9812345678"
+									name="phone"
 									className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] dark:bg-blue-900 dark:border-blue-800 dark:border rounded-lg p-2"
+									required
 								/>
 							</div>
 							<div className="flex flex-col w-full md:w-1/2">
@@ -114,7 +151,11 @@ const Contact = () => {
 									<span className="text-red-500">*</span>
 								</label>
 
-								<select className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] rounded-lg p-2.5 mt- dark:bg-blue-900 dark:border-blue-800 dark:border">
+								<select
+									name="country"
+									className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] rounded-lg p-2.5 mt- dark:bg-blue-900 dark:border-blue-800 dark:border"
+									required
+								>
 									<option value="">
 										Select your country
 									</option>
@@ -138,20 +179,26 @@ const Contact = () => {
 							</label>
 							<textarea
 								placeholder="Enter here..."
+								name="message"
+								rows={8}
 								className="focus:ring-2 focus:ring-blue-500 focus:outline-none bg-[#326232af] rounded-lg w-full h-40 p-2 resize-none align-top dark:bg-blue-900 dark:border-blue-800 dark:border"
+								required
 							/>
 						</div>
 
 						{/* ---------------SUBMIT------------- */}
-						<div className="flex items-center my-5 mx-4 md:justify-start sm:justify-center">
+						<button
+							type="submit"
+							className="flex items-center my-5 mx-4 md:justify-start sm:justify-center"
+						>
 							<div className="border-yellow-500 dark:border-red-700 border-2 rounded-full px-6 py-1.5 bg-[#005427] dark:bg-gradient-to-r dark:from-[#0c0fb3] dark:to-[#25282b] text-white font-semibold cursor-pointer z-10  hover:scale-103 transition">
 								Submit
 							</div>
-							<button className="flex items-center justify-end bg-yellow-500 dark:bg-red-700  rounded-full py-1.5 px-1 -ml-9 cursor-pointer z-0 shadow-lg w-17 border-2 border-yellow-500 dark:border-red-700">
+							<div className="flex items-center justify-end bg-yellow-500 dark:bg-red-700  rounded-full py-1.5 px-1 -ml-9 cursor-pointer z-0 shadow-lg w-17 border-2 border-yellow-500 dark:border-red-700">
 								<FaArrowRight className="text-black text-2xl p-1 rounded-2xl bg-white" />
-							</button>
-						</div>
-					</motion.div>
+							</div>
+						</button>
+					</motion.form>
 				</div>
 			</div>
 		</>

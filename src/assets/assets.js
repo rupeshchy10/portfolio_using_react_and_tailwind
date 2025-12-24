@@ -1,6 +1,6 @@
 import sun_icon from "./images/sun_icon.svg";
 import moon_icon from "./images/moon_icon.svg";
-import Dish from "./images/Portfolio.png";
+import Website_Clone from "./images/Website_Clone.png";
 import Imaginet from "./images/Imaginet.png";
 import PickZy from "./images/PickZy.png";
 import Portfolio from "./images/Portfolio.png";
@@ -54,14 +54,14 @@ const projects = [
 	},
     {
 		id: 4,
-		title: "Dish Picker",
-		// image: Dish,
-		alt_pic: "Dish_Pic",
-		techs: ["HTML", "JavaScript", "CSS"],
-		description: "A disk picker website",
+		title: "Website Clone - Percime Technology",
+		image: Website_Clone,
+		alt_pic: "Website_Clone",
+		techs: ["React", "Tailwind", "JavaScript"],
+		description: "A frontend UI clone of the Percime Technology website",
 
-		live_demo: "",
-		view_code: "",
+		live_demo: "https://clone-website-of-percime.vercel.app/",
+		view_code: "https://github.com/rupeshchy10/Clone_Website_of_Percime",
 	},
 ];
 
