@@ -186,6 +186,18 @@ const Contact = () => {
 							/>
 						</div>
 
+						{/* For metadata. These inputs will be hidden from user UI */}
+						<input
+							type="hidden"
+							name="subject"
+							value="Portfolio Contact Form"
+						/>
+						<input
+							type="hidden"
+							name="from_name"
+							value="Rupesh Portfolio"
+						/>
+
 						{/* ---------------SUBMIT------------- */}
 						<button
 							type="submit"
